@@ -17,13 +17,25 @@
         }
 
         .header {
+            position: relative;
             text-align: center;
             padding: 20px;
             margin-bottom: 20px;
+            background-color: #333;
+            color: #b3ff00;
+            border-bottom: 5px solid #b3ff00;
         }
 
-        h1, h2, p {
-            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+        .header img {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            max-width: 500px;
+        }
+
+        h1,
+        h2,
+        p {
             color: #b3ff00;
         }
 
@@ -37,58 +49,102 @@
         }
 
         .highlight {
-            background-color: #000000;
-            padding: 20px;
+            background-color: #333;
+            padding: 10px;
             border-radius: 10px;
-            margin: 20px;
+            margin: 20px auto;
+            max-width: 600px;
         }
 
         .video-container {
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 20px;
+            padding: 10px;
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #333;
+            border-radius: 10px;
         }
 
         .image-link img {
-            max-width: 300px;
+            max-width: 100px;
+            border-radius: 10px;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #b3ff00;
+            margin: 0 15px;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: #4ccf6d;
+        }
+
+        iframe {
+            border-radius: 10px;
         }
     </style>
 </head>
 
 <body>
-    <main>
-        <section class="header highlight">
+    <header class="header">
+        <a href="https://tecnoblog.net/responde/breaking-bad-entenda-a-ordem-cronologica-de-better-call-saul-e-el-camino/"
+            target="_blank">
+            <img src="iconbreakingbad.png" alt="Logo de Breaking Bad"> </a>
             <h1>Projeto Final: Breaking Bad</h1>
-            <p>Grupo 1 Tema 4</p>
+            <a href="https://docs.google.com/spreadsheets/d/1xl-txpmdCJqVMO-NAvao5w4Osysqcomw/edit#gid=1953410889">
+            <p> Tema 4 Grupo 1</p></a>
             <h2>Desenvolvido por: <a href="https://www.linkedin.com/in/lucas-cardoso-weidner-871165205/"
                     target="_blank">Lucas Cardoso Weidner</a></h2>
-        </section>
 
-        <section class="video-container highlight">
+            <nav>
+                <a href="#sinopse">Sinopse</a>
+                <a href="#filme">Filme</a>
+                <a href="#trailer">Trailer</a>
+            </nav>
+    </header>
+
+    <main>
+        <section class="video-container">
             <p>Este projeto é uma página dedicada à série de televisão Breaking Bad. Aqui, os fãs podem encontrar
                 informações sobre personagens, enredo, e muito mais!</p>
         </section>
 
-        <section class="video-container highlight">
-            <a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Ftecnoblog.net%2Fresponde%2Fbreaking-bad-entenda-a-ordem-cronologica-de-better-call-saul-e-el-camino%2F&psig=AOvVaw3kggfmI5OVK1KCjUX0rrrq&ust=1690907603298000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCMiXi-yvuYADFQAAAAAdAAAAABAE"
-                target="_blank">
-                <img src="iconbreakingbad.png" alt="imagem redirecionando link">
-            </a>
-        </section>
-
-        <article class="video-container highlight">
+        <section class="highlight" id="sinopse">
             <h2>Sinopse</h2>
             <p>Breaking Bad é uma série de televisão americana criada por Vince Gilligan, que conta a história de Walter
                 White, um professor de química que se envolve no mundo do tráfico de drogas após ser diagnosticado com
                 câncer terminal. A série acompanha a transformação de Walter de um homem comum em um poderoso chefão do
                 narcotráfico, conhecido como "Heisenberg".</p>
+        </section>
+
+        <section class="highlight" id="filme">
+            <h2>O filme: El Camino: A Breaking Bad Movie</h2>
+            <p>O filme El Camino: A Breaking Bad Movie é uma continuação da série de televisão Breaking Bad, seguindo o
+                personagem Jesse Pinkman após os eventos do final da série. O filme foi lançado pela Netflix em 11 de
+                outubro de 2019. O título é uma referência ao Chevrolet El Camino que Jesse dirige para escapar do
+                complexo de supremacistas brancos onde ele foi mantido em cativeiro. O filme recebeu críticas positivas,
+                com muitos elogiando a performance de Aaron Paul.</p>
+            <p><a href="https://www.youtube.com/watch?v=2-W6_6gJda0" target="_blank">Clique aqui para assistir ao
+                    trailer de El Camino: A Breaking Bad Movie</a></p>
+        </section>
+
+        <section class="highlight" id="trailer">
             <h2>Assista ao Trailer</h2>
-            <iframe width="460" height="215" src="https://www.youtube.com/embed/2-W6_6gJda0"
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/2-W6_6gJda0"
                 title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
-        </article>
+        </section>
     </main>
 </body>
 
