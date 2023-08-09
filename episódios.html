@@ -3,7 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Episódios | Blog Breaking Bad</title>
+    <link rel="shortcut icon" href="imagens/breakingbad2.jfif" alt="Foto Breaking Bad">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -30,11 +32,24 @@
             padding: 20px;
             background-color: #333;
             border-radius: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .episode:hover {
+            background-color: #444;
         }
 
         .episode h2,
-        .episode p {
+        .episode p,
+        .episode h3 {
             color: #b3ff00;
+        }
+
+        .episode img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 15px;
         }
 
         footer {
@@ -44,47 +59,70 @@
             color: #b3ff00;
             margin-top: 20px;
         }
+        
         .link-icon {
             width: 24px;
             height: 24px;
         }
+
         a {
             color: aqua;
         }
+        .post h2,
+        .post p {
+            color: #b3ff00;
+        }
+        nav {
+            background-color: #333;
+            padding: 20px;
+            text-align: center;
+            font-size: 1.2em; /* Aqui aumentamos o tamanho da fonte */
+        }
+
+        nav a {
+            color: #b3ff00;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: #4ccf6d;
+        }
+        footer {
+            background-color: #333;
+            padding: 20px;
+            text-align: center;
+            color: #b3ff00;
+            margin-top: 20px;
+        }
+
     </style>
 </head>
 
 <body>
     <header>
         <h1>Episódios de Breaking Bad</h1>
-        <a href="index.html">Voltar para a página inicial</a>
     </header>
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="personagens.html">Personagens</a>
+        <a href="episódios.html">Episódios</a>
+        <a href="#loja">Loja</a>
+    </nav>
 
     <div class="episode">
         <h2>Episódio 1: Pilot</h2>
+        <h3>Data de exibição: 20 de Janeiro de 2008</h3>
+        <img src="pilot_episode_image_link" alt="Pilot Episode">
         <p>O professor de química do ensino médio Walter White descobre que tem câncer e decide entrar para o crime, produzindo e vendendo metanfetamina com seu ex-aluno Jesse Pinkman.</p>
-    </div>
-
-    <div class="episode">
-        <h2>Episódio 2: Cat's in the Bag...</h2>
-        <p>Depois de seu primeiro negócio de drogas dar errado, Walt e Jesse são forçados a lidar com um cadáver e uma refém desesperada.</p>
-    </div>
-
-    <div class="episode">
-        <h2>Episódio 3: ...And the Bag's in the River</h2>
-        <p>Walt está lutando com a decisão de matar Krazy-8. Walt em vão tenta voltar para a vida normal. Enquanto isso, Jesse precisa lidar com as consequências de Krazy-8 e de sua moto.</p>
+        <h3>Duração: 58 minutos</h3>
+        <h3>Avaliação: 8.9/10</h3>
     </div>
 
     <!-- Adicione mais episódios aqui -->
 
     <footer>
-        <p>© 2023
-            <h3> <a href="https://www.linkedin.com/in/lucas-cardoso-weidner-871165205/?lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_jobs%3BvYqpfiR0SySp84a97fngNg%3D%3D"
-                target="_blank">
-                <img src="imagens/icon linkedin.png" alt="" class="link-icon">LinkedIn</a>
-            <br>
-            <a href="https://www.instagram.com/lucas__weidner/" target="_blank">
-                <img src="imagens/icon insta.png" alt="" class="link-icon">Instagram</a>.</p>
+        <p>© 2023, Lucas Cardoso, Pedro Henrique, Jefferson, Gabriel</p>
     </footer>
 </body>
 

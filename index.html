@@ -3,8 +3,14 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Blog Breaking Bad</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Blog Breaking Bad - Projeto Final">
+    <meta name="keywords" content="Breaking Bad, Blog, Loja">
+    <meta name="author" content="Lucas Cardoso ">
+    <title>Breaking Bad</title>
     <link rel="shortcut icon" href="imagens/breakingbad2.jfif" alt="Foto Breaking Bad">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="estilos.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -27,8 +33,9 @@
 
         nav {
             background-color: #333;
-            padding: 10px;
+            padding: 20px;
             text-align: center;
+            font-size: 1.4em; 
         }
 
         nav a {
@@ -66,26 +73,33 @@
             width: 24px;
             height: 24px;
         }
+
         a {
             color: aqua;
+        }
+
+        .header-image {
+            width: 100%;
+            height: 70vh;
+            object-fit: cover;
         }
     </style>
 </head>
 
 <body>
     <header>
-        <h1>Projeto Final: Breaking Bad</h1>
-        <p><a href="https://docs.google.com/spreadsheets/d/1xl-txpmdCJqVMO-NAvao5w4Osysqcomw/edit#gid=1953410889"> Tema 4 Grupo 1</a></p>
-        <h2>Desenvolvido por: <a href="https://www.linkedin.com/in/lucas-cardoso-weidner-871165205/"
-                target="_blank">Lucas Cardoso Weidner</a></h2>
+        <h1>Projeto Final: Breaking Bad</h1>  
     </header>
+
     <nav>
-        <a href="#inicio">Início</a>
+        <a href="index.html">Início</a>
         <a href="personagens.html">Personagens</a>
         <a href="episódios.html">Episódios</a>
-        <a href="#premios">Prêmios</a>
-        <a href="#spinoff">Spin-off</a>
+        <a href="#loja">Loja</a>
     </nav>
+    <div>
+        <img class="header-image" src="imagens/bb2.jpeg" alt="Breaking Bad">
+    </div>
     <div class="post" id="inicio">
         <h2>Início: A história de Breaking Bad</h2>
         <p>Breaking Bad é uma série de televisão americana criada e produzida por Vince Gilligan. A série foi ao ar pela
@@ -93,14 +107,7 @@
             história que mostra duas identidades distintas, Walter White, um professor de química do ensino médio em
             Albuquerque, Novo México, e o traficante de drogas sócio de Jesse Pinkman, Heisenberg.</p>
     </div>
-    <div class="post" id="personagens">
-        <h2>Personagens: Os protagonistas de Breaking Bad</h2>
-        <p>Breaking Bad apresenta uma variedade de personagens intrigantes e complexos. Walter White, o protagonista,
-            começa como um humilde professor de química que se transforma em um impiedoso magnata das drogas. Jesse
-            Pinkman, ex-aluno de Walter, se torna seu relutante parceiro no crime. Outros personagens notáveis incluem
-            Skyler White, a esposa de Walter, Hank Schrader, um agente da DEA e cunhado de Walter, e Saul Goodman, um
-            advogado astuto que se envolve com Walter e Jesse.</p>
-    </div>
+
     <div class="post" id="premios">
         <h2>Prêmios: Reconhecimentos para Breaking Bad</h2>
         <p>Breaking Bad recebeu ampla aclamação da crítica e ganhou vários prêmios, incluindo 16 Primetime Emmy Awards.
@@ -115,14 +122,9 @@
             pequeno advogado procurando sua sorte, para o persona moralmente contestável de Saul Goodman.</p>
     </div>
     <footer>
-        <p>© 2023
-        <h3> <a href="https://www.linkedin.com/in/lucas-cardoso-weidner-871165205/?lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_jobs%3BvYqpfiR0SySp84a97fngNg%3D%3D"
-            target="_blank">
-            <img src="imagens/icon linkedin.png" alt="" class="link-icon">LinkedIn</a>
-        <br>
-        <a href="https://www.instagram.com/lucas__weidner/" target="_blank">
-            <img src="imagens/icon insta.png" alt="" class="link-icon">Instagram</a>.
-            </p>
+        <p>© 2023, Lucas Cardoso, Pedro Henrique, Jefferson, Gabriel
+
+        </p>
     </footer>
 </body>
 
