@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Personagens | Blog Breaking Bad</title>
+    <link rel="shortcut icon" href="imagens/breakingbad2.jfif" alt="Foto Breaking Bad">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -30,13 +31,26 @@
             padding: 20px;
             background-color: #333;
             border-radius: 10px;
+            margin-bottom: 30px;
         }
 
-        .character h2,
-        .character p {
-            color: #b3ff00;
+        .character img {
+            width: 100px;
+            height: auto;
+            border-radius: 50%;
+            float: left;
+            margin-right: 10px;
         }
 
+        .character-info {
+            display: flex;
+            align-items: center;
+        }
+
+        .clear {
+            clear: both;
+        }
+        
         footer {
             background-color: #333;
             padding: 20px;
@@ -44,74 +58,96 @@
             color: #b3ff00;
             margin-top: 20px;
         }
-
-        .character img {
-            width: 100px;
-            height: auto;
-            border-radius: 25%;
-            float: left;
-            margin-right: 10px;
+        nav {
+            background-color: #333;
+            padding: 20px;
+            text-align: center;
+            font-size: 1.2em; 
         }
 
-        .link-icon {
-            width: 24px;
-            height: 24px;
+        nav a {
+            color: #b3ff00;
+            margin: 0 15px;
+            text-decoration: none;
         }
 
-        a {
-            color: aqua;
+        nav a:hover {
+            color: #4ccf6d;
         }
+        h2, p {
+            color: #4ccf6d;
 
+        }
     </style>
 </head>
 
 <body>
     <header>
         <h1>Personagens de Breaking Bad</h1>
-        <a href="index.html">Voltar para a página inicial</a>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="personagens.html">Personagens</a>
+            <a href="episódios.html">Episódios</a>
+            <a href="#loja">Loja</a>
+        </nav>
     </header>
+
     <div class="character">
-        <h2>Walter White</h2>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQHMdB6pN4Sxj362t9YxHef9xxxvKlr70bXerxwXl7&s"
-            alt="Walter White">
-        <p>Walter White, interpretado por Bryan Cranston, é o protagonista de Breaking Bad. Ele começa como um humilde
-            professor de química que se transforma em um impiedoso magnata das drogas conhecido como "Heisenberg".</p>
-        <div style="clear: both;"></div>
+        <div class="character-info">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQHMdB6pN4Sxj362t9YxHef9xxxvKlr70bXerxwXl7&s"
+                alt="Walter White">
+            <div>
+                <h2>Walter White</h2>
+                <p>Walter White, interpretado por Bryan Cranston, é o protagonista de Breaking Bad. Ele começa como um humilde
+                    professor de química que se transforma em um impiedoso magnata das drogas conhecido como "Heisenberg".</p>
+            </div>
+        </div>
+        <div class="clear"></div>
     </div>
+
     <div class="character">
-        <h2>Jesse Pinkman</h2>
-        <img src="imagens/jesse.jfif"
+        <div class="character-info">
+            <img src="imagens/jesse.jfif"
             alt="jesse pinkman">
-        <p>Jesse Pinkman, interpretado por Aaron Paul, é um ex-aluno de Walter que se torna seu relutante parceiro no
-            crime. Jesse é um personagem complexo cuja lealdade e moralidade são frequentemente testadas ao longo da
-            série.</p>
-        <div style="clear: both;"></div>
+            <div>
+                <h2>Jesse Pinkman</h2>
+                <p>Jesse Pinkman, interpretado por Aaron Paul, é um ex-aluno de Walter que se torna seu relutante parceiro no
+                crime. Jesse é um personagem complexo cuja lealdade e moralidade são frequentemente testadas ao longo da
+                série.</p>
+            </div>
+        </div>
+        <div class="clear"></div>
     </div>
+
     <div class="character">
-        <h2>Skyler White</h2>
-        <img src="imagens/skyler.jfif"
+        <div class="character-info">
+            <img src="imagens/skyler.jfif"
             alt="Skyler White">
-        <p>Skyler White, interpretada por Anna Gunn, é a esposa de Walter. Durante a série, ela se vê presa em uma teia
-            de mentiras e crimes por causa de seu marido.</p>
-        <div style="clear: both;"></div>
+            <div>
+                <h2>Skyler White</h2>
+                <p>Skyler White, interpretada por Anna Gunn, é a esposa de Walter. Durante a série, ela se vê presa em uma teia
+                de mentiras e crimes por causa de seu marido.</p>
+            </div>
+        </div>
+        <div class="clear"></div>
     </div>
+
     <div class="character">
-        <h2>Saul Goodman</h2>
-        <img src="imagens/saul.jfif"
+        <div class="character-info">
+            <img src="imagens/saul.jfif"
             alt="Saul Goodman">
-        <p>Saul Goodman, interpretado por Bob Odenkirk, é um advogado astuto que se envolve com Walter e Jesse. Ele é
-            conhecido por seus métodos éticos questionáveis e por suas habilidades para manipular o sistema legal a seu
-            favor.</p>
-        <div style="clear: both;"></div>
+            <div>
+                <h2>Saul Goodman</h2>
+                <p>Saul Goodman, interpretado por Bob Odenkirk, é um advogado astuto que se envolve com Walter e Jesse. Ele é
+                conhecido por seus métodos éticos questionáveis e por suas habilidades para manipular o sistema legal a seu
+                favor.</p>
+            </div>
+        </div>
+        <div class="clear"></div>
     </div>
+
     <footer>
-        <p>© 2023
-        <h3> <a href="https://www.linkedin.com/in/lucas-cardoso-weidner-871165205/?lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_jobs%3BvYqpfiR0SySp84a97fngNg%3D%3D"
-                target="_blank">
-                <img src="imagens/icon linkedin.png" alt="" class="link-icon">LinkedIn</a>
-            <br>
-            <a href="https://www.instagram.com/lucas__weidner/" target="_blank">
-                <img src="imagens/icon insta.png" alt="" class="link-icon">Instagram</a>.</p>
+        <p>© 2023, Lucas Cardoso, Pedro Henrique, Jefferson, Gabriel</p>
     </footer>
 </body>
 
