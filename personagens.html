@@ -25,20 +25,28 @@
             color: #4ccf6d;
         }
 
+        .characters-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around; /* Para distribuir uniformemente os personagens */
+            margin: 0 auto;
+            max-width: 1600px;
+            padding: 20px;
+        }
+
         .character {
-            max-width: 800px;
-            margin: 20px auto;
+            flex-basis: calc(50% - 40px); /* 40px considera uma margem de 20px de cada lado */
+            box-sizing: border-box;
+            margin: 20px;
             padding: 20px;
             background-color: #333;
             border-radius: 10px;
-            margin-bottom: 30px;
         }
 
         .character img {
-            width: 100px;
-            height: auto;
+            width: 80px;
+            height: auto; /* mantém a proporção da imagem */
             border-radius: 50%;
-            float: left;
             margin-right: 10px;
         }
 
@@ -47,10 +55,6 @@
             align-items: center;
         }
 
-        .clear {
-            clear: both;
-        }
-        
         footer {
             background-color: #333;
             padding: 20px;
@@ -58,11 +62,12 @@
             color: #b3ff00;
             margin-top: 20px;
         }
+
         nav {
             background-color: #333;
             padding: 20px;
             text-align: center;
-            font-size: 1.2em; 
+            font-size: 1.2em;
         }
 
         nav a {
@@ -74,6 +79,7 @@
         nav a:hover {
             color: #4ccf6d;
         }
+
         h2, p {
             color: #4ccf6d;
         }
@@ -91,59 +97,146 @@
         </nav>
     </header>
 
-    <div class="character">
-        <div class="character-info">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQHMdB6pN4Sxj362t9YxHef9xxxvKlr70bXerxwXl7&s"
-                alt="Walter White">
-            <div>
-                <h2>Walter White</h2>
-                <p>Walter White, interpretado por Bryan Cranston, é o protagonista de Breaking Bad. Ele começa como um humilde
-                    professor de química que se transforma em um impiedoso magnata das drogas conhecido como "Heisenberg".</p>
-            </div>
-        </div>
-        <div class="clear"></div>
-    </div>
+    <section class="characters-container">
+        <section class="character">
+            <section class="character-info">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQHMdB6pN4Sxj362t9YxHef9xxxvKlr70bXerxwXl7&s" alt="Walter White">
+                <section>
+                    <h2>Walter White</h2>
+                    <p>Walter White, interpretado por Bryan Cranston, é o protagonista de Breaking Bad. Ele começa como um
+                        humilde
+                        professor de química que se transforma em um impiedoso magnata das drogas conhecido como
+                        "Heisenberg"</p>
+                </section>
+            </section>
+        </section>
 
-    <div class="character">
-        <div class="character-info">
-            <img src="imagens/jesse.jfif"
-            alt="jesse pinkman">
-            <div>
-                <h2>Jesse Pinkman</h2>
-                <p>Jesse Pinkman, interpretado por Aaron Paul, é um ex-aluno de Walter que se torna seu relutante parceiro no
-                crime. Jesse é um personagem complexo cuja lealdade e moralidade são frequentemente testadas ao longo da
-                série.</p>
-            </div>
-        </div>
-        <div class="clear"></div>
-    </div>
+        <section class="character">
+            <section class="character-info">
+                <img src="imagens/jesse.jfif" alt="jesse pinkman">
+                <section>
+                    <h2>Jesse Pinkman</h2>
+                    <p>Jesse Pinkman, interpretado por Aaron Paul, é um ex-aluno de Walter que se torna seu relutante
+                        parceiro no
+                        crime. Jesse é um personagem complexo cuja lealdade e moralidade são frequentemente testadas ao
+                        longo da
+                        série.</p>
+                </section>
+            </section>
+        </section>
+        <section class="character">
+            <section class="character-info">
+                <img src="imagens/jane.jfif" alt="Jane">
+                <section>
+                    <h2>Jane Margolis</h2>
+                    <p>Jane Margolis, ou simplesmente, Jane. Conhecida como o grande amor de Jesse Pinkman, a jovem marcou Breaking Bad, mesmo participando de poucos episódios.</p>
+                </section>
+            </section>
+        </section>
+        <section class="character">
+            <section class="character-info">
+                <img src="imagens/tuco.jfif" alt="Tuco Salamanca">
+                <section>
+                    <h2>Tuco Salamanca</h2>
+                    <p>Tuco Salamanca é um traficante mexicano e um distribuidor de alto escalão do Cartel. Membro da família Salamanca, Tuco é neto de Abuelita e sobrinho de Heitor.</p>
+                </section>
+            </section>
+        </section>
 
-    <div class="character">
-        <div class="character-info">
-            <img src="imagens/skyler.jfif"
-            alt="Skyler White">
-            <div>
-                <h2>Skyler White</h2>
-                <p>Skyler White, interpretada por Anna Gunn, é a esposa de Walter. Durante a série, ela se vê presa em uma teia
-                de mentiras e crimes por causa de seu marido.</p>
-            </div>
-        </div>
-        <div class="clear"></div>
-    </div>
-
-    <div class="character">
-        <div class="character-info">
-            <img src="imagens/saul.jfif"
-            alt="Saul Goodman">
-            <div>
-                <h2>Saul Goodman</h2>
-                <p>Saul Goodman, interpretado por Bob Odenkirk, é um advogado astuto que se envolve com Walter e Jesse. Ele é
-                conhecido por seus métodos éticos questionáveis e por suas habilidades para manipular o sistema legal a seu
-                favor.</p>
-            </div>
-        </div>
-        <div class="clear"></div>
-    </div>
+        <section class="character">
+            <section class="character-info">
+                <img src="imagens/skyler.jfif" alt="Skyler White">
+                <section>
+                    <h2>Skyler White</h2>
+                    <p>Skyler White, interpretada por Anna Gunn, é a esposa de Walter. Durante a série, ela se vê presa em
+                        uma teia
+                        de mentiras e crimes por causa de seu marido.</p>
+                </section>
+            </section>
+        </section>
+        <section class="character">
+            <section class="character-info">
+                <img src="imagens/skinny.webp" alt="Skinny pete">
+                <section>
+                    <h2>Skinny pete</h2>
+                    <p>Peter, mais chamado como Skinny Pete, é um dos amigos de longa data de Jesse Pinkman e um distribuidor de metanfetamina de baixo nível.</p>
+                </section>
+            </section>
+        </section>
+        <section class="character">
+            <section class="character-info">
+                <img src="imagens/Badger.webp" alt="Badger">
+                <section>
+                    <h2>Brandon Mayhew</h2>
+                    <p>Brandon Mayhew, mais conhecido como Badger, tambem é um dos amigos de longa data de Jesse Pinkman e um distribuidor de metanfetamina de baixo escalão.</p>
+                </section>
+            </section>
+        </section>
+    
+        <section class="character">
+            <section class="character-info">
+                <img src="imagens/saul.jfif" alt="Saul Goodman">
+                <section>
+                    <h2>Saul Goodman</h2>
+                    <p>Saul Goodman, interpretado por Bob Odenkirk, é um advogado astuto que se envolve com Walter e Jesse.
+                        Ele é
+                        conhecido por seus métodos éticos questionáveis e por suas habilidades para manipular o sistema
+                        legal a seu
+                        favor.</p>
+                </section>
+            </section>
+        </section>
+        <section class="character">
+            <section class="character-info">
+                <img src="imagens/gusfring.jfif" alt="Gustavo Fring">
+                <section>
+                    <h2>Gustavo Fring</h2>
+                    <p>Um poderoso chefão das drogas, Gus era um cidadão chileno e um respeitado dono de restaurante e
+                        filantropo de Albuquerque, dono de uma bem-sucedida cadeia de restaurantes de frango chamada "Los
+                        Pollos Hermanos " e a usava como cobertura para uma rede de distribuição de metanfetamina</p>
+                </section>
+            </section>
+        </section>
+        <section class="character">
+            <section class="character-info">
+                <img src="imagens/hank.jfif" alt="Hank">
+                <section>
+                    <h2>Hank Schrader</h2>
+                    <p>Henry R. Schrader é o cunhado do personagem principal Walter White, e é um agente da Drug Enforcement
+                        Administration (DEA) em Albuquerque, Novo México. Ao longo da série, ele lidera a investigação sobre
+                        o cozinheiro de metanfetaminas "Heisenberg" – sem saber que o traficante indescritível é seu próprio
+                        cunhado.</p>
+                </section>
+            </section>
+        </section>
+        <section class="character">
+            <section class="character-info">
+                <img src="imagens/walterjunior.jfif" alt="Flyn">
+                <section>
+                    <h2>Walter White Jr.</h2>
+                    <p>Walter Hartwell White Jr., comumente conhecido simplesmente como Walt Jr. ou Junior e também por seu
+                        pseudônimo "Flynn", é o filho de dezessete anos de Walter e Skyler e o irmão mais velho de Holly.
+                        Ele frequenta a J. P. Wynne High School, onde seu pai trabalhava como professor de química no ensino
+                        médio. Ele tem paralisia cerebral, que se manifesta em dificuldades de fala e controle motor
+                        prejudicado, para o qual usa muletas.</p>
+                </section>
+            </section>
+        </section>
+        <section class="character">
+            <section class="character-info">
+                <img src="imagens/mike.jfif" alt="Mike">
+                <section>
+                    <h2>Mike Ehrmantraut</h2>
+                    <p>Michael "Mike" Ehrmantraut é um criminoso de carreira americano, veterano do Corpo de Fuzileiros
+                        Navais e ex-policial da Filadélfia. Calmo e calculista, Mike mais tarde se tornou um investigador
+                        particular, assassino de aluguel, assassino e consertador violento de traficantes de drogas para
+                        sustentar financeiramente sua família (sua nora Stacey e sua neta Kaylee ). Trabalhou para Gustavo
+                        Fring e Saul Goodmancomo investigador particular, chefe de segurança, faxineiro, consertador e
+                        assassino de aluguel.</p>
+                </section>
+            </section>
+        </section>
+    </section>
 
     <footer>
         <p>© 2023, Lucas Cardoso, Pedro Henrique, Jefferson, Gabriel</p>
