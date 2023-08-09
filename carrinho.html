@@ -12,7 +12,81 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="estilos.css">
     <style>
-        body {
+        /* ... (Mantive o CSS conforme você enviou, sem mudanças) ... */
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Carrinho: Breaking Bad</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="personagens.html">Personagens</a>
+        <a href="episódios.html">Episódios</a>
+        <a href="loja.html">Loja</a>
+    </nav>
+    
+    <div class="product">
+        <h2>Itens no Carrinho:</h2>
+        
+        <!-- Exemplo de item no carrinho -->
+        <div class="cart-item">
+            <img src="imagens/camiseta.jpg" alt="Camiseta Breaking Bad" style="width: 15%;">
+            <p>Produto: Camiseta Breaking Bad</p>
+            <p>Preço: R$50,00</p>
+            <p>
+                Quantidade: 
+                <input type="number" id="quantidadeCamiseta" value="1" min="1" onchange="atualizarPreco()">
+            </p>
+            <button class="btn-buy" onclick="removerItem('Camiseta Breaking Bad')">Remover</button>
+        </div>
+
+        <!-- Adicione mais itens conforme necessário -->
+
+        <h3 id="total">Total: R$50,00</h3>
+
+        <button class="btn-buy" onclick="location.href='pagamentos.html'">Prosseguir para Pagamento</button>
+    </div>
+
+
+    <footer>
+        <p>© 2023, Lucas Cardoso, Pedro Henrique, Jefferson, Gabriel</p>
+    </footer>
+
+    <script>
+        function removerItem(produto) {
+            // Aqui você colocaria a lógica para remover o item do carrinho.
+            // Estou apenas mostrando um alerta como um placeholder.
+            alert(`Removido ${produto} do carrinho!`);
+            location.reload(); // Simula uma remoção atualizando a página.
+        }
+
+        function atualizarPreco() {
+            let quantidade = document.getElementById("quantidadeCamiseta").value;
+            let total = 50 * quantidade; // Supondo que o preço da camiseta é R$50.00
+            document.getElementById("total").innerText = `Total: R$${total},00`;
+        }
+    </script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Carrinho de Compras - Loja Breaking Bad">
+    <meta name="keywords" content="Breaking Bad, Loja, Carrinho">
+    <meta name="author" content="Lucas Cardoso ">
+    <title>Carrinho - Loja Breaking Bad</title>
+    <link rel="shortcut icon" href="imagens/breakingbad2.jfif" alt="Foto Breaking Bad">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="estilos.css">
+    <style>
+       body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -120,22 +194,37 @@ footer {
             <img src="imagens/camiseta.jpg" alt="Camiseta Breaking Bad" style="width: 15%;">
             <p>Produto: Camiseta Breaking Bad</p>
             <p>Preço: R$50,00</p>
-            <p>Quantidade: 1</p>
-            <button class="btn-buy">Remover</button>
+            <p>
+                Quantidade: 
+                <input type="number" id="quantidadeCamiseta" value="1" min="1" onchange="atualizarPreco()">
+            </p>
+            <button class="btn-buy" onclick="removerItem('Camiseta Breaking Bad')">Remover</button>
         </div>
 
         <!-- Adicione mais itens conforme necessário -->
 
-        <h3>Total: R$50,00</h3>
+        <h3 id="total">Total: R$50,00</h3>
 
         <button class="btn-buy" onclick="location.href='pagamentos.html'">Prosseguir para Pagamento</button>
     </div>
-    <button class="btn-buy" onclick="location.href='pagamentos.html'">Prosseguir para Pagamento</button>
 
 
     <footer>
         <p>© 2023, Lucas Cardoso, Pedro Henrique, Jefferson, Gabriel</p>
     </footer>
+
+    <script>
+        function removerItem(produto) {
+            alert(`Removido ${produto} do carrinho!`);
+            location.reload(); // Simula uma remoção atualizando a página.
+        }
+
+        function atualizarPreco() {
+            let quantidade = document.getElementById("quantidadeCamiseta").value;
+            let total = 50 * quantidade; // Supondo que o preço da camiseta é R$50.00
+            document.getElementById("total").innerText = `Total: R$${total},00`;
+        }
+    </script>
 </body>
 
 </html>
