@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Loja Breaking Bad - Produtos Oficiais">
+    <meta name="keywords" content="Breaking Bad, Blog, Loja">
+    <meta name="author" content="Lucas Cardoso ">
+    <title>Loja Breaking Bad</title>
+    <link rel="shortcut icon" href="imagens/breakingbad2.jfif" alt="Foto Breaking Bad">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="estilos.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1F1F1F;
+            color: #fff;
+        }
+
+        header {
+            background-color: #333;
+            padding: 20px;
+            text-align: center;
+            color: #b3ff00;
+        }
+
+        header a {
+            color: #4ccf6d;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 20px;
+            text-align: center;
+            font-size: 1.4em;
+        }
+
+        nav a {
+            color: #b3ff00;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: #4ccf6d;
+        }
+
+        .product {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #333;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .product img {
+            max-width: 70%;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            padding: 20px;
+            text-align: center;
+            color: #b3ff00;
+            margin-top: 20px;
+        }
+
+        .btn-buy {
+            background-color: #b3ff00;
+            color: #333;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-buy:hover {
+            background-color: #4ccf6d;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Loja Oficial: Breaking Bad</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="personagens.html">Personagens</a>
+        <a href="episódios.html">Episódios</a>
+        <a href="loja.html">Loja</a>
+        <a href="carrinho.html">Carrinho</a>
+    </nav>
+    
+    <!-- Exemplo de Produto -->
+    <div class="product">
+        <img src="imagens/camiseta.jpg" alt="Camiseta Breaking Bad">
+        <h2>Camiseta Breaking Bad</h2>
+        <p>Uma camiseta estilizada com o logo icônico de Breaking Bad.</p>
+        <p>Preço: R$50,00</p>
+        <button class="btn-buy" onclick="adicionarAoCarrinho('Camiseta Breaking Bad', 50)">Adicionar ao Carrinho</button>
+    </div>
+
+    <!-- Adicione mais produtos conforme necessário -->
+
+    <footer>
+        <p>© 2023, Lucas Cardoso, Pedro Henrique, Jefferson, Gabriel</p>
+    </footer>
+</body>
+
+</html>
