@@ -6,8 +6,10 @@
     <title>Personagens | Blog Breaking Bad</title>
     <link rel="shortcut icon" href="imagens/breakingbad2.jfif" alt="Foto Breaking Bad">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #1F1F1F;
@@ -16,38 +18,51 @@
 
         header {
             background-color: #333;
-            padding: 20px;
+            padding: 25px 20px;
             text-align: center;
             color: #b3ff00;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         header a {
             color: #4ccf6d;
+            transition: color 0.3s;
+        }
+
+        header a:hover {
+            color: #b3ff00;
         }
 
         .characters-container {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-around; /* Para distribuir uniformemente os personagens */
+            justify-content: space-around;
             margin: 0 auto;
             max-width: 1600px;
-            padding: 20px;
+            padding: 25px;
         }
 
         .character {
-            flex-basis: calc(50% - 40px); /* 40px considera uma margem de 20px de cada lado */
+            flex-basis: calc(50% - 40px);
             box-sizing: border-box;
             margin: 20px;
             padding: 20px;
             background-color: #333;
-            border-radius: 10px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .character:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
 
         .character img {
             width: 80px;
-            height: auto; /* mantém a proporção da imagem */
+            height: auto;
             border-radius: 50%;
-            margin-right: 10px;
+            margin-right: 15px;
         }
 
         .character-info {
@@ -57,31 +72,95 @@
 
         footer {
             background-color: #333;
-            padding: 20px;
+            padding: 25px 20px;
             text-align: center;
             color: #b3ff00;
-            margin-top: 20px;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
         }
 
         nav {
             background-color: #333;
-            padding: 20px;
+            padding: 25px 20px;
             text-align: center;
             font-size: 1.2em;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         nav a {
             color: #b3ff00;
-            margin: 0 15px;
+            margin: 0 20px;
             text-decoration: none;
+            transition: color 0.3s, background-color 0.3s;
+            padding: 5px 10px;
+            border-radius: 5px;
         }
 
-        nav a:hover {
+        nav a:hover,
+        nav a:focus {
             color: #4ccf6d;
+            background-color: #1F1F1F;
         }
 
-        h2, p {
+        p,
+        aside h3,
+        .character-info {
+            text-shadow: 1px 1px 2px rgba(11, 94, 0, 0.993);
+        }
+        h2 {
+            color: #b3ff00;
+        }
+
+        
+
+        aside {
+            background-color: #333;
+            padding: 10px 20px;
+            margin: -400px 0 0 10px;
+            border-radius: 30px;
+            width: 170px;
+            float: left;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        aside h3 {
+            color: #b3ff00;
+            border-bottom: 2px solid #b3ff00;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+
+        aside ul li a {
             color: #4ccf6d;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+            background: rgba(0, 0, 0, 0.1);
+        }
+
+        aside ul li a:hover,
+        aside ul li a:focus {
+            background-color: #4ccf6d;
+            color: #1F1F1F;
+            text-decoration: underline;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            display: none;
+            background-color: #333;
+            color: #b3ff00;
+            padding: 10px 20px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .back-to-top:hover {
+            background-color: #555555;
         }
     </style>
 </head>
@@ -100,10 +179,12 @@
     <section class="characters-container">
         <section class="character">
             <section class="character-info">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQHMdB6pN4Sxj362t9YxHef9xxxvKlr70bXerxwXl7&s" alt="Walter White">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQHMdB6pN4Sxj362t9YxHef9xxxvKlr70bXerxwXl7&s"
+                    alt="Walter White">
                 <section>
                     <h2>Walter White</h2>
-                    <p>Walter White, interpretado por Bryan Cranston, é o protagonista de Breaking Bad. Ele começa como um
+                    <p>Walter White, interpretado por Bryan Cranston, é o protagonista de Breaking Bad. Ele começa como
+                        um
                         humilde
                         professor de química que se transforma em um impiedoso magnata das drogas conhecido como
                         "Heisenberg"</p>
@@ -129,7 +210,8 @@
                 <img src="imagens/jane.jfif" alt="Jane">
                 <section>
                     <h2>Jane Margolis</h2>
-                    <p>Jane Margolis, ou simplesmente, Jane. Conhecida como o grande amor de Jesse Pinkman, a jovem marcou Breaking Bad, mesmo participando de poucos episódios.</p>
+                    <p>Jane Margolis, ou simplesmente, Jane. Conhecida como o grande amor de Jesse Pinkman, a jovem
+                        marcou Breaking Bad, mesmo participando de poucos episódios.</p>
                 </section>
             </section>
         </section>
@@ -138,7 +220,8 @@
                 <img src="imagens/tuco.jfif" alt="Tuco Salamanca">
                 <section>
                     <h2>Tuco Salamanca</h2>
-                    <p>Tuco Salamanca é um traficante mexicano e um distribuidor de alto escalão do Cartel. Membro da família Salamanca, Tuco é neto de Abuelita e sobrinho de Heitor.</p>
+                    <p>Tuco Salamanca é um traficante mexicano e um distribuidor de alto escalão do Cartel. Membro da
+                        família Salamanca, Tuco é neto de Abuelita e sobrinho de Heitor.</p>
                 </section>
             </section>
         </section>
@@ -148,7 +231,8 @@
                 <img src="imagens/skyler.jfif" alt="Skyler White">
                 <section>
                     <h2>Skyler White</h2>
-                    <p>Skyler White, interpretada por Anna Gunn, é a esposa de Walter. Durante a série, ela se vê presa em
+                    <p>Skyler White, interpretada por Anna Gunn, é a esposa de Walter. Durante a série, ela se vê presa
+                        em
                         uma teia
                         de mentiras e crimes por causa de seu marido.</p>
                 </section>
@@ -159,7 +243,8 @@
                 <img src="imagens/skinny.webp" alt="Skinny pete">
                 <section>
                     <h2>Skinny pete</h2>
-                    <p>Peter, mais chamado como Skinny Pete, é um dos amigos de longa data de Jesse Pinkman e um distribuidor de metanfetamina de baixo nível.</p>
+                    <p>Peter, mais chamado como Skinny Pete, é um dos amigos de longa data de Jesse Pinkman e um
+                        distribuidor de metanfetamina de baixo nível.</p>
                 </section>
             </section>
         </section>
@@ -168,17 +253,19 @@
                 <img src="imagens/Badger.webp" alt="Badger">
                 <section>
                     <h2>Brandon Mayhew</h2>
-                    <p>Brandon Mayhew, mais conhecido como Badger, tambem é um dos amigos de longa data de Jesse Pinkman e um distribuidor de metanfetamina de baixo escalão.</p>
+                    <p>Brandon Mayhew, mais conhecido como Badger, tambem é um dos amigos de longa data de Jesse Pinkman
+                        e um distribuidor de metanfetamina de baixo escalão.</p>
                 </section>
             </section>
         </section>
-    
+
         <section class="character">
             <section class="character-info">
                 <img src="imagens/saul.jfif" alt="Saul Goodman">
                 <section>
                     <h2>Saul Goodman</h2>
-                    <p>Saul Goodman, interpretado por Bob Odenkirk, é um advogado astuto que se envolve com Walter e Jesse.
+                    <p>Saul Goodman, interpretado por Bob Odenkirk, é um advogado astuto que se envolve com Walter e
+                        Jesse.
                         Ele é
                         conhecido por seus métodos éticos questionáveis e por suas habilidades para manipular o sistema
                         legal a seu
@@ -192,7 +279,8 @@
                 <section>
                     <h2>Gustavo Fring</h2>
                     <p>Um poderoso chefão das drogas, Gus era um cidadão chileno e um respeitado dono de restaurante e
-                        filantropo de Albuquerque, dono de uma bem-sucedida cadeia de restaurantes de frango chamada "Los
+                        filantropo de Albuquerque, dono de uma bem-sucedida cadeia de restaurantes de frango chamada
+                        "Los
                         Pollos Hermanos " e a usava como cobertura para uma rede de distribuição de metanfetamina</p>
                 </section>
             </section>
@@ -202,9 +290,12 @@
                 <img src="imagens/hank.jfif" alt="Hank">
                 <section>
                     <h2>Hank Schrader</h2>
-                    <p>Henry R. Schrader é o cunhado do personagem principal Walter White, e é um agente da Drug Enforcement
-                        Administration (DEA) em Albuquerque, Novo México. Ao longo da série, ele lidera a investigação sobre
-                        o cozinheiro de metanfetaminas "Heisenberg" – sem saber que o traficante indescritível é seu próprio
+                    <p>Henry R. Schrader é o cunhado do personagem principal Walter White, e é um agente da Drug
+                        Enforcement
+                        Administration (DEA) em Albuquerque, Novo México. Ao longo da série, ele lidera a investigação
+                        sobre
+                        o cozinheiro de metanfetaminas "Heisenberg" – sem saber que o traficante indescritível é seu
+                        próprio
                         cunhado.</p>
                 </section>
             </section>
@@ -214,9 +305,12 @@
                 <img src="imagens/walterjunior.jfif" alt="Flyn">
                 <section>
                     <h2>Walter White Jr.</h2>
-                    <p>Walter Hartwell White Jr., comumente conhecido simplesmente como Walt Jr. ou Junior e também por seu
-                        pseudônimo "Flynn", é o filho de dezessete anos de Walter e Skyler e o irmão mais velho de Holly.
-                        Ele frequenta a J. P. Wynne High School, onde seu pai trabalhava como professor de química no ensino
+                    <p>Walter Hartwell White Jr., comumente conhecido simplesmente como Walt Jr. ou Junior e também por
+                        seu
+                        pseudônimo "Flynn", é o filho de dezessete anos de Walter e Skyler e o irmão mais velho de
+                        Holly.
+                        Ele frequenta a J. P. Wynne High School, onde seu pai trabalhava como professor de química no
+                        ensino
                         médio. Ele tem paralisia cerebral, que se manifesta em dificuldades de fala e controle motor
                         prejudicado, para o qual usa muletas.</p>
                 </section>
@@ -228,15 +322,33 @@
                 <section>
                     <h2>Mike Ehrmantraut</h2>
                     <p>Michael "Mike" Ehrmantraut é um criminoso de carreira americano, veterano do Corpo de Fuzileiros
-                        Navais e ex-policial da Filadélfia. Calmo e calculista, Mike mais tarde se tornou um investigador
+                        Navais e ex-policial da Filadélfia. Calmo e calculista, Mike mais tarde se tornou um
+                        investigador
                         particular, assassino de aluguel, assassino e consertador violento de traficantes de drogas para
-                        sustentar financeiramente sua família (sua nora Stacey e sua neta Kaylee ). Trabalhou para Gustavo
+                        sustentar financeiramente sua família (sua nora Stacey e sua neta Kaylee ). Trabalhou para
+                        Gustavo
                         Fring e Saul Goodmancomo investigador particular, chefe de segurança, faxineiro, consertador e
                         assassino de aluguel.</p>
                 </section>
             </section>
         </section>
     </section>
+    <script>
+        window.onscroll = function () {
+            var btn = document.querySelector('.back-to-top');
+            if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        };
+
+        function backToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+    <span class="back-to-top" onclick="backToTop()">&#8679;</span>
 
     <footer>
         <p>© 2023, Lucas Cardoso, Pedro Henrique, Jefferson, Gabriel</p>

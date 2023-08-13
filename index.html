@@ -12,59 +12,186 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="estilos.css">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #1F1F1F;
             color: #fff;
+            line-height: 1.5;
+
         }
 
         header {
             background-color: #333;
-            padding: 20px;
+            padding: 25px 20px;
             text-align: center;
+            color: #b3ff00;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header a,
+        nav a,
+        .post a {
+            transition: color 0.3s, background-color 0.3s;
+
+        }
+
+        header a:hover {
             color: #b3ff00;
         }
 
-        header a {
+        .characters-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 0 auto;
+            max-width: 1600px;
+            padding: 25px;
+        }
+
+        .character {
+            flex-basis: calc(50% - 40px);
+            box-sizing: border-box;
+            margin: 20px;
+            padding: 20px;
+            background-color: #333;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .character:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .character img {
+            width: 80px;
+            height: auto;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+
+        .character-info {
+            display: flex;
+            align-items: center;
+        }
+
+        footer {
+            background-color: #333;
+            padding: 25px 20px;
+            text-align: center;
+            color: #b3ff00;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2,
+        p {
             color: #4ccf6d;
+        }
+
+        aside {
+            background-color: #333;
+            padding: 10px 20px;
+            margin: -400px 0 0 10px;
+            border-radius: 30px;
+            width: 170px;
+            float: left;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        aside h3 {
+            color: #b3ff00;
+            border-bottom: 2px solid #b3ff00;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+
+        aside ul li a {
+            color: #4ccf6d;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+            background: rgba(0, 0, 0, 0.1);
+        }
+
+        aside ul li a:hover,
+        aside ul li a:focus {
+            background-color: #4ccf6d;
+            color: #1F1F1F;
+            text-decoration: underline;
         }
 
         nav {
             background-color: #333;
-            padding: 20px;
+            padding: 10px 0;
             text-align: center;
             font-size: 1.4em;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         nav a {
             color: #b3ff00;
-            margin: 0 15px;
+            margin: 0 20px;
             text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
         }
 
+        nav a:hover,
         nav a:focus,
         nav a:active {
-            background-color: #555555;
-            border-radius: 5px;
-            padding: 5px;
-        }
-
-        nav a:hover {
-            color: #4ccf6d;
+            background-color: #b3ff00;
+            color: #333;
         }
 
         .post {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #333;
-            border-radius: 10px;
+            background-color: #1E1E1E;
+            padding: 40px;
+            margin-bottom: 40px;
+            border: 1px solid #b3ff00;
+            border-radius: 35px;
+            margin: 20px 40px 40px;
+            box-shadow: 0 8px 16px rgba(11, 94, 0, 0.993);
         }
 
-        .post h2,
+        .post h2 {
+            color: #b3ff00;
+            border-bottom: 2px solid #b3ff00;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+            font-size: 24px;
+            text-shadow: 1px 1px 2px rgba(11, 94, 0, 0.993);
+        }
+
         .post p {
+            color: #ddd;
+            font-size: 19px;
+            line-height: 1.6;
+            margin-bottom: 40px;
+
+        }
+
+        .post a {
+            color: #000000;
+            text-decoration: none;
+            background-color: #98b94a;
+            padding: 8px 12px;
+            border-radius: 3px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .post a:hover {
+            background-color: #333;
             color: #b3ff00;
         }
 
@@ -73,7 +200,7 @@
             padding: 20px;
             text-align: center;
             color: #b3ff00;
-            margin-top: 20px;
+            margin-top: 170px;
         }
 
         .link-icon {
@@ -86,9 +213,13 @@
         }
 
         .header-image {
-            width: 100%;
-            height: 70vh;
+            width: 80%;
+            height: 50vh;
             object-fit: cover;
+            display: block;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
         }
 
         .back-to-top {
@@ -107,39 +238,46 @@
         .back-to-top:hover {
             background-color: #555555;
         }
+
         aside {
-    background-color: #333;
-    padding: 20px;
-    margin: 20px 0;
-    border-radius: 10px;
-    width: 370px;
-}
+            background-color: #333;
+            padding: 10px 20px;
+            margin: -400px 0;
+            border-radius: 30px;
+            width: 170px;
+            float: left;
+            margin-left: 10px;
 
-aside h3 {
-    color: #b3ff00;
-    border-bottom: 2px solid #b3ff00;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-}
 
-aside ul {
-    list-style-type: none;
-    padding-left: 0;
-}
+        }
 
-aside ul li {
-    margin-bottom: 10px;
-}
+        aside h3 {
+            color: #b3ff00;
+            border-bottom: 2px solid #b3ff00;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
 
-aside ul li a {
-    color: #4ccf6d;
-    text-decoration: none;
-}
+        aside ul li a {
+            color: #4ccf6d;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
 
-aside ul li a:hover {
-    text-decoration: underline;
-}
+        aside ul li a:hover,
+        aside ul li a:focus {
+            background-color: #4ccf6d;
+            color: #1F1F1F;
+            text-decoration: underline;
+        }
 
+        aside a img {
+            margin-right: 5px;
+            vertical-align: middle;
+        }
     </style>
 </head>
 
@@ -158,60 +296,129 @@ aside ul li a:hover {
     <section>
         <img class="header-image" src="imagens/bb2.jpeg" alt="Breaking Bad">
     </section>
-    
+    <aside>
+        <h3>Redes Sociais</h3><br>
+        <a href="https://www.facebook.com/BreakingBad"><img src="imagens/face.png" alt="Ícone do Facebook" width="20px">
+            Facebook</a> <br><br>
+        <a href="https://twitter.com/BreakingBad"><img src="imagens/twitter.jfif" alt="Ícone do Twitter" width="20px">
+            Twitter</a> <br><br>
+        <a href="https://www.instagram.com/breakingbad/"><img src="imagens/icon insta.png" alt="Ícone do Instagram"
+                width="20px"> Instagram</a>
+        <br><br>
+        <h3></h3>
+    </aside>
+
 
     <section class="post" id="inicio">
         <h2>Início: A história de Breaking Bad</h2>
-        <p>Breaking Bad é uma série de televisão americana criada e produzida por Vince Gilligan. A série foi ao ar pela
-            primeira vez nos Estados Unidos e Canadá em 20 de janeiro de 2008. A série de cinco temporadas é uma
-            história que mostra duas identidades distintas, Walter White, um professor de química do ensino médio em
-            Albuquerque, Novo México, e o traficante de drogas sócio de Jesse Pinkman, Heisenberg.</p>
-    </section>
+        <p>Breaking Bad retrata a vida do químico Walter White, um homem brilhante, mas frustrado por dar aulas para
+            adolescentes do ensino médio, enquanto precisa lidar com um filho que tem paralisia cerebral, uma esposa
+            grávida e muitas dívidas.
 
-    <section class="post" id="premios">
-        <h2>Prêmios: Reconhecimentos para Breaking Bad</h2>
-        <p>Breaking Bad recebeu ampla aclamação da crítica e ganhou vários prêmios, incluindo 16 Primetime Emmy Awards.
-            Bryan Cranston ganhou quatro prêmios de Melhor Ator por seu papel como Walter White, e Aaron Paul ganhou
-            três prêmios de Melhor Ator Coadjuvante por sua interpretação de Jesse Pinkman. A série também ganhou dois
-            Globos de Ouro e foi nomeada para quatro prêmios Peabody.</p>
-    </section>
+            Para piorar sua situação, ele é diagnosticado com câncer no pulmão, o que o leva a sofrer um colapso
+            emocional e abraçar uma vida de crimes para pagar suas dívidas hospitalares, e tentar prover uma melhor
+            qualidade de vida aos seus filhos.
+            Walt decide usar seus conhecimentos em química para produzir metanfetamina de alta pureza, apelidada nas
+            ruas como “Cristal Azul”, com a ajuda de seu ex-aluno problemático, Jesse Pinkman.
 
-    <section class="post" id="spinoff">
-        <h2>Spin-off: Better Call Saul</h2>
-        <p>Better Call Saul é um spin-off prequela de Breaking Bad, centrado no personagem Saul Goodman, seis anos antes
-            de se tornar o advogado de Walter White. A série explora a evolução do personagem de Jimmy McGill, um
-            pequeno advogado procurando sua sorte, para o persona moralmente contestável de Saul Goodman.</p>
-        <a
-            href="https://www.techtudo.com.br/noticias/2023/01/better-call-saul-veja-historia-elenco-e-trailer-do-spin-off-de-breaking-bad-streaming.ghtml">Leia
-            mais...</a>
+            Breaking Bad se passa em Albuquerque, uma grande cidade localizada no estado do Novo México, e gira em torno
+            das escolhas de seu protagonista, as quais o levam a uma intensa, dolorosa e inevitável transformação ao
+            longo dos episódios.
+
+            Vince Gilligan queria criar um enredo diferenciado, onde o protagonista aos poucos fosse corrompido por seus
+            próprios ideais, tornando-se ao final, o principal antagonista.
+            O criador da série acrescenta que seu objetivo com Walter White, sempre foi o de transformá-lo de um Sr.
+            Chips (“Goodbye, Mr. Chips”– 1939) para um Tony Montana (“Scarface”– 1983).
+
+            Breaking Bad foi amplamente considerada como uma das melhores séries da história ao seu final, sendo um dos
+            programas da televisão a cabo mais assistidos nos Estados Unidos.
+            A série tornou-se instantaneamente, um clássico entre as séries dramáticas, e esse êxito se refletiu na
+            enorme quantidade de fãs, que consideram Walter White como um verdadeiro ícone cultural.
+
+            Já na primeira temporada e com apenas sete capítulos no ar, o programa conquistou quatro indicações ao Emmy
+            2008, das quais levou o prêmio em duas categorias, sendo “Melhor Ator em Série Dramática” para Bryan
+            Cranston, e “Melhor Montagem”.
+
+            Nos dois anos posteriores, Cranston voltou a receber o prêmio, enquanto em 2012 e 2013 Aaron Paul apareceu
+            também premiado como “Melhor Ator Coadjuvante”, assim como Anna Gunn em 2013.
+
+            Contudo, a série faria história em 2014, onde superou todas as expectativas, recebendo os prêmios de “Melhor
+            Ator Principal” (Bryan Cranston), “Melhor Ator e Atriz Coadjuvante” (Aaron Paul e Anna Gunn), além de
+            “Melhor Série Dramática”, entre as 16 categorias a que foi indicada.</p>
     </section>
     <section class="post">
         <h2>Walter White pode voltar? Astro de Breaking Bad dá resposta definitiva</h2>
         <p>Existem rumores circulando por Hollywood de que Walter White pode retornar em uma sequência especial de
-            Breaking Bad. Enquanto os detalhes são escassos, os fãs estão em êxtase com a possibilidade.</p>
-        <a
-            href="https://observatoriodocinema.uol.com.br/series/walter-white-pode-voltar-astro-de-breaking-bad-da-resposta-definitiva/">Leia
-            mais...</a>
+            Breaking Bad. Enquanto os detalhes são escassos, os fãs estão em êxtase com a possibilidade.
+            Ao The Hollywood Reporter, Bryan Cranston foi questionado se voltaria a viver o personagem de novo. Porém,
+            em um derivado ou filme próprio.
+            Isso significaria mudar o final de Breaking Bad. Até então, os fãs acreditam e o próprio famoso garante que
+            Walter White está morto.
+            O ator respondeu que isso não deve acontecer.
+            “Fiquei contente com fim de Breaking Bad. Eu achei que foi o fim perfeito. Sei que posso ser tendencioso,
+            mas não lembro de ter visto uma série com o final tão bem construído, satisfatório e legítimo. Tudo parece
+            acabar em um lugar muito satisfatório. Todo mundo diz que ‘menos é mais’ e isso é verdade. Você quer deixar
+            o público querendo mais. Isso é verdade. Não dê mais do que querem”, declarou o astro.
+            Em outra entrevista, Bryan Cranston tinha deixado claro que Walter White está morto. Assim, é bem difícil
+            que a série ganhe alguma continuação tendo o personagem.
+            Uma divertida teoria até diz que o traficante fingiu a morte. Depois, teria virado o Hal de Malcolm in the
+            Middle. O astro negou a divertida sugestão.Em participação online no programa do Jimmy Fallon, o ator falou
+            sobre a ideia do personagem de Breaking Bad ter sobrevivido e adotado a nova identidade.
+
+            “Não posso divulgar esse tipo de informação sem as necessárias autorizações da segurança”, brincou Bryan
+            Cranston. “Acho que é divertido. Não sei. Walter White está definitivamente – ele está morto”. </p>
+    </section>
+
+    <section class="post" id="spinoff">
+        <h2>Spin-off: Better Call Saul</h2>
+        <p>A história do spin-off é ambientada seis anos antes dos eventos de Breaking Bad, em que o protagonista
+            conhece Walter White (Brian Cranston) e Jesse Pinkman (Aaron Paul). Em Better Call Saul, o advogado de
+            pequenas causas Jimmy McGill (Bob Odenkirk) precisa estabilizar sua situação financeira enquanto cuida do
+            irmão que está passando por problemas de saúde mental. Acompanhamos, então, sua transformação em Saul
+            Goodman, um profissional capaz de tornar criminosos em homens dentro da “lei”.
+            Better Call Saul é uma série de drama originada do sucesso Breaking Bad que segue a trajetória do advogado
+            fora da lei Saul Goodman, interpretado pelo ator Bob Odenkirk (Anônimo), antes dos eventos da série
+            principal. A produção tem seis temporadas, está disponível na Netflix e é um sucesso de crítica, tendo
+            conquistado três troféus no Critics Choice Awards 2023: Melhor Série de Drama, Melhor Ator em Série de Drama
+            para Odenkirk e Melhor Ator Coadjuvante em Série de Drama para Giancarlo Esposito.
+
+            O spin-off foi escrito por Vince Gilligan, mesmo criador de Breaking Bad, juntamente com Peter Gould,
+            roteirista e produtor que também trabalhou nas cinco temporadas da série original. Produzida e transmitida
+            pela emissora americana AMC, Better Call Saul foi ao ar entre 2015 e 2022. Confira, a seguir, mais
+            informações sobre o enredo, elenco, repercussão e trailer da série.
+            A última temporada da produção disponível na Netflix foi lançada em 2022 e ganhou três categorias do Critics
+            Choice Awards 2023, como Melhor Série de Drama.</p>
+            <a href="https://www.youtube.com/watch?v=zzy6wWjFONY" target="_blank">Assista o Trailer</a>
+
     </section>
 
     <section class="post">
         <h2>Spin-off: Jesse Pinkman</h2>
-        <p>El Camino é uma despedida à altura de Jesse Pinkman, mas não de Breaking Bad. Já disponível na Netflix, El
-            Camino: A Breaking Bad Film responde à pergunta "para onde foi Jesse?"</p>
+        <p>O filme El Camino: A Breaking Bad Movie já está disponível na Netflix, e os fãs finalmente podem descobrir o
+            que o criador Vince Gilligan imaginou para o final do amado personagem Jesse Pinkman (Aaron Paul). O final
+            do personagem havia ficado em aberto, no encerramento de Breaking Bad, e há anos os fãs cobravam do criador
+            um desfecho digno para ele.
+            Para quem assistiu o filme, muitos já consideraram que este tenha sido um desfecho satisfatório para Jesse.
+            Mesmo que El Camino dê um final relativamente feliz à história de Jesse, onde vemos ele começando sua vida novamente, o filme deixa a história tecnicamente aberta a uma sequência que levaria Jesse a ser o Sr. Driscoll no Alasca. No entanto, considerando que foram necessários seis anos entre Breaking Bad e El Camino, podemos levar um tempo até termos uma possível continuação. Logo, por enquanto, para os fãs que estão se perguntando se El Camino terá continuação, a resposta rápida é não! Mas, quem sabe…?
+        </p>
         <a
-            href="https://mixdeseries.com.br/spoiler-de-el-camino-saiba-o-que-acontece-no-final-do-filme-de-breaking-bad/">Leia
-            mais...</a>
+            href="https://www.youtube.com/watch?v=2ir8eLkz2tQ&t=1s" target="_blank" >Assista o Trailer</a>
     </section>
-    <aside>
-        Redes Sociais</h3>
-    <a href="https://www.facebook.com/BreakingBad">Facebook</a> | 
-    <a href="https://twitter.com/BreakingBad">Twitter</a>
-     | <a href="https://www.instagram.com/breakingbad/">Instagram</a>
-    </aside>
-    
+    <section class="post" id="premios">
+        <h2>Prêmios: Reconhecimentos para Breaking Bad</h2>
+        <p>Breaking Bad recebeu ampla aclamação da crítica e ganhou vários prêmios, incluindo 16 Primetime Emmy Awards.
+            Bryan Cranston ganhou quatro prêmios de Melhor Ator por seu papel como Walter White, e Aaron Paul ganhou
+            três prêmios de Melhor Ator Coadjuvante por sua interpretação de Jesse Pinkman. Em 2014, na 71ª edição do
+            Globo de Ouro, depois de vários anos de indicações, Breaking Bad também conquistou o prêmio de “Melhor Ator
+            de Drama” para Bryan Cranston e o prêmio de “Melhor Série Dramática”.
+
+            No restante das premiações o êxito foi similar, sendo que entre 2008 e 2014, a série conquistou 5 prêmios no
+            Satellite Awards, 3 estatuetas de 11 indicações no Screen Actors Guild Awards, e 9 prêmios no Saturn Awards,
+            entre mais de 20 indicações.</p>
+    </section>
+
     <script>
-        // Função para o botão "Voltar ao Topo"
-        window.onscroll = function() {
+        window.onscroll = function () {
             var btn = document.querySelector('.back-to-top');
             if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
                 btn.style.display = "block";
@@ -219,10 +426,10 @@ aside ul li a:hover {
                 btn.style.display = "none";
             }
         };
-    
+
         function backToTop() {
-            document.body.scrollTop = 0; // Para Safari
-            document.documentElement.scrollTop = 0; // Para outros navegadores
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
         }
     </script>
     <span class="back-to-top" onclick="backToTop()">&#8679;</span>
