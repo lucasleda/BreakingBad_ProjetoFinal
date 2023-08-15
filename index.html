@@ -9,8 +9,12 @@
     <meta name="author" content="Lucas Cardoso ">
     <title>Breaking Bad</title>
     <link rel="shortcut icon" href="imagens/breakingbad2.jfif" alt="Foto Breaking Bad">
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="estilos.css">
+    <!-- Importando o Bootstrap -->
+    <link rel="stylesheet" href="estilos.css"><!-- Importando o arquivo de estilo principal do projeto -->
+
+    <!-- Importando a fonte Roboto do Google Fonts -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
 
@@ -87,7 +91,7 @@
 
         aside h3 {
             color: #b3ff00;
-            border-bottom: 2px solid #b3ff00;
+            border-bottom: 2px solid #4ccf6d;
             padding-bottom: 10px;
             margin-bottom: 10px;
         }
@@ -110,7 +114,7 @@
         }
 
         nav {
-            background-color: #333;
+            background-color: #012006;
             padding: 10px 0;
             text-align: center;
             font-size: 1.4em;
@@ -118,6 +122,7 @@
             position: sticky;
             top: 0;
             z-index: 1000;
+            box-shadow: 0 8px 16px rgba(11, 94, 0, 0.993);
         }
 
         nav a {
@@ -224,13 +229,23 @@
         aside {
             background-color: #333;
             padding: 10px 20px;
-            margin: -400px 0;
             border-radius: 30px;
-            width: 170px;
-            float: left;
-            margin-left: 10px;
+            width: 370px;
+            margin-right: 20px;
+            margin-left: 35px;
+            box-shadow: 0 8px 16px rgba(11, 94, 0, 0.993);
+            border: 2px solid #b3ff00;
 
+            clear: both;
+            /* Limpa ambos os lados, forçando o <aside> a ficar abaixo de qualquer elemento flutuante */
+        }
 
+        @media (max-width: 768px) {
+            aside {
+                width: 100%;
+                /* Expande para a largura total em dispositivos móveis */
+                padding: 10px 5px;
+            }
         }
 
         aside h3 {
@@ -303,10 +318,12 @@
 </head>
 
 <body>
+
     <header>
-        <h1>Projeto Final: Breaking Bad</h1>
+        <h1>Breaking Bad</h1> <!-- Cabeçalho -->
     </header>
 
+    <!-- Barra de navegação com links para as principais seções do site -->
     <nav>
         <a href="index.html">Início</a>
         <a href="personagens.html">Personagens</a>
@@ -317,77 +334,59 @@
     <section>
         <img class="header-image" src="imagens/bb2.jpeg" alt="Breaking Bad">
     </section>
-    <aside>
-        <h3>Redes Sociais</h3><br>
-        <a href="https://www.facebook.com/BreakingBad"><img src="imagens/face.png" alt="Ícone do Facebook" width="20px">
-            Facebook</a> <br><br>
-        <a href="https://twitter.com/BreakingBad"><img src="imagens/twitter.jfif" alt="Ícone do Twitter" width="20px">
-            Twitter</a> <br><br>
-        <a href="https://www.instagram.com/breakingbad/"><img src="imagens/icon insta.png" alt="Ícone do Instagram"
-                width="20px"> Instagram</a>
-        <br><br>
-        <h3></h3>
-    </aside>
 
 
+    <!-- Seções com os posts e artigos do blog -->
     <section class="post" id="inicio">
         <h2>Início: A história de Breaking Bad</h2>
-        <p>Breaking Bad retrata a vida do químico Walter White, um homem brilhante, mas frustrado por dar aulas para
-            adolescentes do ensino médio, enquanto precisa lidar com um filho que tem paralisia cerebral, uma esposa
-            grávida e muitas dívidas.
+        <p>Breaking Bad" é uma obra-prima televisiva que mergulha profundamente na jornada de transformação do químico
+            Walter White. Um profissional extremamente talentoso, Walter se encontra subutilizado, ensinando química
+            para adolescentes do ensino médio. A vida não lhe deu tréguas: além de enfrentar desafios familiares, como
+            um filho com paralisia cerebral e uma esposa à espera do segundo filho, a pressão financeira torna-se
+            insuportável.
 
-            Para piorar sua situação, ele é diagnosticado com câncer no pulmão, o que o leva a sofrer um colapso
-            emocional e abraçar uma vida de crimes para pagar suas dívidas hospitalares, e tentar prover uma melhor
-            qualidade de vida aos seus filhos.
-            Walt decide usar seus conhecimentos em química para produzir metanfetamina de alta pureza, apelidada nas
-            ruas como “Cristal Azul”, com a ajuda de seu ex-aluno problemático, Jesse Pinkman.
+            Seus desafios se intensificam quando é diagnosticado com câncer terminal de pulmão. Esta notícia desencadeia
+            um colapso emocional que o leva a uma decisão radical: entrar no submundo do crime. Walter, com a intenção
+            inicial de prover financeiramente sua família após sua morte, decide utilizar seus vastos conhecimentos em
+            química para fabricar a metanfetamina mais pura do mercado. E nesse novo caminho, ele se alia a Jesse
+            Pinkman, um ex-aluno e pequeno traficante.
 
-            Breaking Bad se passa em Albuquerque, uma grande cidade localizada no estado do Novo México, e gira em torno
-            das escolhas de seu protagonista, as quais o levam a uma intensa, dolorosa e inevitável transformação ao
-            longo dos episódios.
+            A narrativa se desenvolve na atmosférica Albuquerque, localizada no Novo México. A série, magistralmente
+            criada por Vince Gilligan, se propõe a narrar a metamorfose de um homem comum, submisso às circunstâncias,
+            transformando-se gradualmente em um barão da droga. Gilligan inspirou-se na transição de personagens
+            icônicos, como o inofensivo Sr. Chips se tornando o impiedoso Tony Montana.
 
-            Vince Gilligan queria criar um enredo diferenciado, onde o protagonista aos poucos fosse corrompido por seus
-            próprios ideais, tornando-se ao final, o principal antagonista.
-            O criador da série acrescenta que seu objetivo com Walter White, sempre foi o de transformá-lo de um Sr.
-            Chips (“Goodbye, Mr. Chips”– 1939) para um Tony Montana (“Scarface”– 1983).
+            Ao longo de suas temporadas, "Breaking Bad" tornou-se um fenômeno cultural. A crítica aclamou a série como
+            uma das mais impressionantes de todos os tempos, e o público correspondeu, tornando-a um dos programas mais
+            assistidos na televisão a cabo americana. O impacto de "Breaking Bad" foi tal que Walter White ascendeu ao
+            panteão dos personagens icônicos da cultura pop.
 
-            Breaking Bad foi amplamente considerada como uma das melhores séries da história ao seu final, sendo um dos
-            programas da televisão a cabo mais assistidos nos Estados Unidos.
-            A série tornou-se instantaneamente, um clássico entre as séries dramáticas, e esse êxito se refletiu na
-            enorme quantidade de fãs, que consideram Walter White como um verdadeiro ícone cultural.
-
-            Já na primeira temporada e com apenas sete capítulos no ar, o programa conquistou quatro indicações ao Emmy
-            2008, das quais levou o prêmio em duas categorias, sendo “Melhor Ator em Série Dramática” para Bryan
-            Cranston, e “Melhor Montagem”.
-
-            Nos dois anos posteriores, Cranston voltou a receber o prêmio, enquanto em 2012 e 2013 Aaron Paul apareceu
-            também premiado como “Melhor Ator Coadjuvante”, assim como Anna Gunn em 2013.
-
-            Contudo, a série faria história em 2014, onde superou todas as expectativas, recebendo os prêmios de “Melhor
-            Ator Principal” (Bryan Cranston), “Melhor Ator e Atriz Coadjuvante” (Aaron Paul e Anna Gunn), além de
-            “Melhor Série Dramática”, entre as 16 categorias a que foi indicada.</p>
+            Desde seu início, a série foi constantemente reconhecida pela excelência em sua produção, roteiro e atuação.
+            Já em sua estreia, obteve quatro indicações ao prestigiado Emmy, conquistando prêmios para Bryan Cranston e
+            pela sua notável montagem. Ao longo dos anos, Cranston, Aaron Paul e Anna Gunn receberam múltiplos prêmios
+            por suas atuações, culminando em 2014, quando a série levou a estatueta em categorias principais,
+            solidificando seu lugar na história da televisão.</p>
     </section>
     <section class="post">
         <h2>Walter White pode voltar? Astro de Breaking Bad dá resposta definitiva</h2>
-        <p>Existem rumores circulando por Hollywood de que Walter White pode retornar em uma sequência especial de
-            Breaking Bad. Enquanto os detalhes são escassos, os fãs estão em êxtase com a possibilidade.
-            Ao The Hollywood Reporter, Bryan Cranston foi questionado se voltaria a viver o personagem de novo. Porém,
-            em um derivado ou filme próprio.
-            Isso significaria mudar o final de Breaking Bad. Até então, os fãs acreditam e o próprio famoso garante que
-            Walter White está morto.
-            O ator respondeu que isso não deve acontecer.
-            “Fiquei contente com fim de Breaking Bad. Eu achei que foi o fim perfeito. Sei que posso ser tendencioso,
-            mas não lembro de ter visto uma série com o final tão bem construído, satisfatório e legítimo. Tudo parece
-            acabar em um lugar muito satisfatório. Todo mundo diz que ‘menos é mais’ e isso é verdade. Você quer deixar
-            o público querendo mais. Isso é verdade. Não dê mais do que querem”, declarou o astro.
-            Em outra entrevista, Bryan Cranston tinha deixado claro que Walter White está morto. Assim, é bem difícil
-            que a série ganhe alguma continuação tendo o personagem.
-            Uma divertida teoria até diz que o traficante fingiu a morte. Depois, teria virado o Hal de Malcolm in the
-            Middle. O astro negou a divertida sugestão.Em participação online no programa do Jimmy Fallon, o ator falou
-            sobre a ideia do personagem de Breaking Bad ter sobrevivido e adotado a nova identidade.
+        <p>Rumores têm agitado Hollywood sobre a possibilidade de Walter White retornar em um episódio especial de
+            "Breaking Bad". A comunidade de fãs da série está eufórica diante dessa possibilidade. Bryan Cranston, o
+            intérprete do icônico personagem, foi questionado pelo "The Hollywood Reporter" sobre a chance de reprisar
+            seu papel, seja em um derivado ou em um longa-metragem.
 
-            “Não posso divulgar esse tipo de informação sem as necessárias autorizações da segurança”, brincou Bryan
-            Cranston. “Acho que é divertido. Não sei. Walter White está definitivamente – ele está morto”. </p>
+            Isso, naturalmente, colocaria em cheque o desfecho conhecido da série. Afinal, grande parte do público, bem
+            como o próprio Cranston, têm como certeza que Walter White encontrou seu fim. Ao ser indagado, o ator foi
+            categórico: “Eu me sinto satisfeito com o término de 'Breaking Bad'. Para mim, foi a conclusão perfeita.
+            Talvez eu seja parcial, mas não consigo pensar em outra série que tenha terminado de forma tão bem executada
+            e gratificante. A máxima de que ‘menos é mais’ se aplica aqui. Deixamos os espectadores querendo mais e isso
+            é um mérito."
+
+            Em um momento descontraído, numa entrevista anterior, Cranston já havia reforçado que Walter White encontrou
+            seu fim. Uma teoria popular e divertida sugere que o personagem forjou sua própria morte e depois se tornou
+            Hal, da série "Malcolm in the Middle". Diante desta especulação, o ator respondeu com bom humor durante uma
+            participação no programa de Jimmy Fallon. “Não posso confirmar essa informação sem as devidas autorizações”,
+            disse ele, em tom jocoso. “Mas é uma ideia interessante. No entanto, Walter White está, de fato, morto.”
+        </p>
     </section>
 
     <section class="post" id="spinoff">
@@ -440,7 +439,19 @@
             Satellite Awards, 3 estatuetas de 11 indicações no Screen Actors Guild Awards, e 9 prêmios no Saturn Awards,
             entre mais de 20 indicações.</p>
     </section>
+    <aside>
+        <h3>Redes Sociais</h3><br>
+        <a href="https://www.facebook.com/BreakingBad"><img src="imagens/face.png" alt="Ícone do Facebook" width="20px">
+            Facebook</a> <br><br>
+        <a href="https://twitter.com/BreakingBad"><img src="imagens/twitter.jfif" alt="Ícone do Twitter" width="20px">
+            Twitter</a> <br><br>
+        <a href="https://www.instagram.com/breakingbad/"><img src="imagens/icon insta.png" alt="Ícone do Instagram"
+                width="20px"> Instagram</a>
+        <br><br>
+        <h3></h3>
+    </aside>
 
+    <!-- Script para mostrar o botão de voltar ao topo da página -->
     <script>
         window.onscroll = function () {
             var btn = document.querySelector('.back-to-top');
@@ -456,6 +467,7 @@
             document.documentElement.scrollTop = 0;
         }
     </script>
+    <!-- Botão para voltar ao início da página -->
     <span class="back-to-top" onclick="backToTop()">&#8679;</span>
 
     <footer>
