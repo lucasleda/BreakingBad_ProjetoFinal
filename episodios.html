@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="author" content="Lucas Cardoso ">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Episódios | Blog Breaking Bad</title>
     <link rel="shortcut icon" href="imagens/breakingbad2.jfif" alt="Foto Breaking Bad">
@@ -53,11 +54,14 @@
         }
 
         footer {
-            background-color: #333;
+            background-color: #1F1F1F;
             padding: 20px;
             text-align: center;
             color: #b3ff00;
-            margin-top: 20px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            box-sizing: border-box;
         }
 
         .link-icon {
@@ -75,11 +79,15 @@
         }
 
         nav {
-            background-color: #333;
-            padding: 20px;
+            background-color: #012006;
+            padding: 10px 0;
             text-align: center;
-            font-size: 1.2em;
-            /* Aqui aumentamos o tamanho da fonte */
+            font-size: 1.4em;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 8px 16px rgba(11, 94, 0, 0.993);
         }
 
         nav a {
@@ -100,7 +108,7 @@
             margin-top: 20px;
         }
 
-       .episode {
+        .episode {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -125,7 +133,10 @@
 
     <div class="episode">
         <h2>Assista ao Trailer</h2>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/FH_Pm-0kuFc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/FH_Pm-0kuFc" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
     </div>
 
     <footer>
