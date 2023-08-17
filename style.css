@@ -295,6 +295,9 @@ a {
 
 /* Estilos de mídia para dispositivos com largura máxima de 768px */
 @media (max-width: 768px) {
+
+   
+
     aside {
         float: none;
         width: 100%;
@@ -311,9 +314,10 @@ a {
         padding: 15px;
     }
 
+    /* Colocando margin auto para navbar não quebrar */
     nav a {
-        margin: 0 10px;
-        font-size: 0.8em;
+        margin: 0 auto;
+        font-size: 90%;
     }
 
     header {
@@ -321,7 +325,7 @@ a {
     }
 
     p, aside h3, .character-info {
-        font-size: 0.9em;
+        font-size: 50%;
     }
 
     h2 {
@@ -348,4 +352,36 @@ a {
         opacity: 1; /* torna-se totalmente opaco quando o mouse passa por cima */
     }
     
+}
+
+/* arrumando responsividade da navbar quando chega em 367px  */
+@media (max-width: 478px ) {
+   
+
+    nav a {
+        margin: 0 auto;
+        font-size: 70%;
+    }
+    
+}
+
+
+/* arrumando responsividade da navbar quando chega em 367px  */
+@media (max-width: 367px ) {
+   
+
+    nav a {
+        margin: 0 auto;
+        font-size: 60%;
+    }
+}
+
+/* arrumando responsividade da navbar quando chega em 334px  */
+@media (max-width: 334px ) {
+   
+   
+    nav a {
+        margin: 0 auto;
+        font-size: 50%;
+    }
 }
