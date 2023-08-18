@@ -1,17 +1,38 @@
 /* Estilos gerais para o corpo do documento */
 body {
-    font-family: 'Roboto', Arial, sans-serif;  /* Define a família de fonte */
-    margin: 0;                                 /* Remove margens padrão */
-    padding: 0;                                /* Remove padding padrão */
-    background-color: #1F1F1F;                 /* Cor de fundo */
-    color: #fff;                               /* Cor do texto */
-    line-height: 1.5;                          /* Altura da linha do texto */
+    font-family: 'Roboto', Arial, sans-serif;
+    /* Define a família de fonte */
+    margin: 0;
+    /* Remove margens padrão */
+    padding: 0;
+    /* Remove padding padrão */
+    background-color: #1F1F1F;
+    /* Cor de fundo */
+    color: #fff;
+    /* Cor do texto */
+    line-height: 1.5;
+    /* Altura da linha do texto */
+}
+
+/* Fonte Letras Breaking Bad */
+@font-face {
+    font-family: 'HeartBreakingBadFont';
+    src: url('fonts/HeartBreakingBadFont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.titulo-principal {
+    font-family: 'HeartBreakingBadFont', sans-serif;
+    font-size: 80px;
+    margin: 0;
+    padding: 0;
 }
 
 /* Estilos para o cabeçalho */
 header {
-    background-color: #333;
-    padding: 25px 20px;
+    background-color: #1F1F1F;
+    padding: 4px 4px;
     text-align: center;
     color: #b3ff00;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -21,16 +42,22 @@ header {
 /* Estilo da imagem do cabeçalho */
 .header-image {
     width: 80%;
-    height: 50vh;                             /* Define a altura como 50% da altura da viewport */
-    object-fit: cover;                        /* Faz a imagem cobrir todo o espaço do contêiner */
+    height: 50vh;
+    /* Define a altura como 50% da altura da viewport */
+    object-fit: cover;
+    /* Faz a imagem cobrir todo o espaço do contêiner */
     display: block;
     margin: 20px auto;
-    border-radius: 10px;                      /* Borda arredondada */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Sombra da imagem */
+    border-radius: 10px;
+    /* Borda arredondada */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    /* Sombra da imagem */
 }
 
 /* Estilos para transições em links do cabeçalho, navegação e post */
-header a, nav a, .post a {
+header a,
+nav a,
+.post a {
     transition: color 0.3s, background-color 0.3s;
 }
 
@@ -45,23 +72,28 @@ nav {
     padding: 10px 0;
     text-align: center;
     font-size: 1.4em;
-    position: sticky;                        /* Fixa a navegação no topo */
+    position: sticky;
+    /* Fixa a navegação no topo */
     top: 0;
-    z-index: 1000;                           /* Garante que o nav esteja sempre no topo */
+    z-index: 1000;
+    /* Garante que o nav esteja sempre no topo */
     box-shadow: 0 8px 16px rgba(11, 94, 0, 0.993);
 }
 
 nav a {
     color: #b3ff00;
     margin: 0 20px;
-    text-decoration: none;                    /* Remove o sublinhado padrão dos links */
+    text-decoration: none;
+    /* Remove o sublinhado padrão dos links */
     padding: 10px 15px;
     border-radius: 5px;
     transition: background-color 0.3s, color 0.3s;
 }
 
 /* Efeitos de hover e foco para os links de navegação */
-nav a:hover, nav a:focus, nav a:active {
+nav a:hover,
+nav a:focus,
+nav a:active {
     background-color: #b3ff00;
     color: #333;
 }
@@ -69,7 +101,8 @@ nav a:hover, nav a:focus, nav a:active {
 /* Estilos para o contêiner de personagens */
 .characters-container {
     display: flex;
-    flex-wrap: wrap;                          /* Permite que os itens quebrem para a próxima linha */
+    flex-wrap: wrap;
+    /* Permite que os itens quebrem para a próxima linha */
     justify-content: space-around;
     margin: 0 auto;
     max-width: 1600px;
@@ -78,19 +111,23 @@ nav a:hover, nav a:focus, nav a:active {
 
 /* Estilos para cada personagem */
 .character {
-    flex-basis: calc(50% - 40px);             /* Define a base de tamanho para cada item */
-    box-sizing: border-box;                   /* Inclui padding e border no tamanho total do elemento */
+    flex-basis: calc(50% - 40px);
+    /* Define a base de tamanho para cada item */
+    box-sizing: border-box;
+    /* Inclui padding e border no tamanho total do elemento */
     margin: 20px;
     padding: 20px;
     background-color: #333;
     border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);/* Sombra do box */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sombra do box */
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 /* Efeito hover para o personagem */
 .character:hover {
-    transform: translateY(-10px);             /* Move o elemento para cima no hover */
+    transform: translateY(-10px);
+    /* Move o elemento para cima no hover */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
@@ -98,18 +135,25 @@ nav a:hover, nav a:focus, nav a:active {
 .character img {
     width: 80px;
     height: auto;
-    border-radius: 50%;                       /* Transforma a imagem em um círculo */
+    border-radius: 50%;
+    /* Transforma a imagem em um círculo */
     margin-right: 15px;
 }
 
 /* Estilo para a info do personagem (nome, descrição) */
 .character-info {
-    display: flex;                            /* Organiza os elementos em uma linha */
-    align-items: center;                      /* Alinha os elementos verticalmente no centro */
+    display: flex;
+    /* Organiza os elementos em uma linha */
+    align-items: center;
+    /* Alinha os elementos verticalmente no centro */
 }
 
 /* Estilos de cor para títulos e parágrafos */
-h2, p, aside h3, .post h2, .post p {
+h2,
+p,
+aside h3,
+.post h2,
+.post p {
     color: #b3ff00;
 }
 
@@ -118,36 +162,41 @@ aside {
     background-color: #333;
     padding: 10px 20px;
     border-radius: 30px;
-    width: 370px;
+    width: 390px;
     margin-right: 20px;
     margin-left: 35px;
     box-shadow: 0 8px 16px rgba(11, 94, 0, 0.993);
     border: 2px solid #b3ff00;
-    clear: both;                              /* Força o aside a ficar abaixo de qualquer elemento flutuante */
+    clear: both;
+    /* Força o aside a ficar abaixo de qualquer elemento flutuante */
 }
 
 /* Estilos para os links dentro da seção aside */
 aside ul li a {
     color: #4ccf6d;
-    text-decoration: none;                    /* Remove o sublinhado padrão dos links */
+    text-decoration: none;
+    /* Remove o sublinhado padrão dos links */
     font-weight: 500;
     padding: 5px 10px;
-    border-radius: 5px;                       /* Borda arredondada nos links */
+    border-radius: 5px;
+    /* Borda arredondada nos links */
     transition: background-color 0.3s, color 0.3s;
     background: rgba(0, 0, 0, 0.1);
 }
 
 /* Efeito hover e foco para os links do aside */
-aside ul li a:hover, aside ul li a:focus {
+aside ul li a:hover,
+aside ul li a:focus {
     background-color: #4ccf6d;
     color: #1F1F1F;
     text-decoration: underline;
 }
 
-/* Estilo para imagens nos links do aside */
+/* icons do aside */
 aside a img {
     margin-right: 5px;
-    vertical-align: middle;                   /* Alinha verticalmente as imagens com o texto */
+    vertical-align: middle;
+    /* Alinha verticalmente as imagens com o texto */
 }
 
 /* Estilos para os posts */
@@ -172,7 +221,8 @@ aside a img {
 /* Estilo para os links dos posts */
 .post a {
     color: #000000;
-    text-decoration: none;                    /* Remove o sublinhado padrão dos links */
+    text-decoration: none;
+    /* Remove o sublinhado padrão dos links */
     background-color: #98b94a;
     padding: 8px 12px;
     border-radius: 3px;
@@ -193,8 +243,10 @@ aside a img {
     background-color: #333;
     border-radius: 10px;
     transition: background-color 0.3s;
-    display: flex;                            /* Organiza os elementos em uma coluna */
-    flex-direction: column;                   /* Direção da coluna flex */
+    display: flex;
+    /* Organiza os elementos em uma coluna */
+    flex-direction: column;
+    /* Direção da coluna flex */
     align-items: center;
     border: 3px solid #b3ff00;
     padding: 10px;
@@ -276,7 +328,8 @@ aside a img {
     padding: 20px;
     text-align: center;
     color: #b3ff00;
-    position: absolute;                       /* Fixa o rodapé na parte inferior da página */
+    position: absolute;
+    /* Fixa o rodapé na parte inferior da página */
     bottom: 0;
     width: 100%;
     box-sizing: border-box;
@@ -295,9 +348,6 @@ a {
 
 /* Estilos de mídia para dispositivos com largura máxima de 768px */
 @media (max-width: 768px) {
-
-   
-
     aside {
         float: none;
         width: 100%;
@@ -314,18 +364,19 @@ a {
         padding: 15px;
     }
 
-    /* Colocando margin auto para navbar não quebrar */
     nav a {
-        margin: 0 auto;
-        font-size: 90%;
+        margin: 0 10px;
+        font-size: 0.8em;
     }
 
     header {
         font-size: 1.2em;
     }
 
-    p, aside h3, .character-info {
-        font-size: 50%;
+    p,
+    aside h3,
+    .character-info {
+        font-size: 0.9em;
     }
 
     h2 {
@@ -333,55 +384,59 @@ a {
     }
 
     .back-to-top {
-        display: none; /* inicia escondido */
-        position: fixed; /* posição fixa no viewport */
-        bottom: 20px; /* 20 pixels do fundo da tela */
-        right: 20px; /* 20 pixels do lado direito da tela */
-        background-color: #b3ff00; /* cor de fundo verde claro, semelhante a outros elementos do seu design */
-        color: #333; /* cor do texto */
-        padding: 10px 15px; /* espaçamento interno */
-        border-radius: 50%; /* borda arredondada */
-        cursor: pointer; /* muda o cursor para indicar clicabilidade */
-        font-size: 2em; /* tamanho do ícone */
-        z-index: 1010; /* para garantir que fique acima de outros elementos */
-        opacity: 0.8; /* ligeiramente transparente */
-        transition: opacity 0.3s; /* transição suave para a opacidade */
+        display: none;
+        /* inicia escondido */
+        position: fixed;
+        /* posição fixa no viewport */
+        bottom: 20px;
+        /* 20 pixels do fundo da tela */
+        right: 20px;
+        /* 20 pixels do lado direito da tela */
+        background-color: #b3ff00;
+        /* cor de fundo verde claro, semelhante a outros elementos do seu design */
+        color: #333;
+        /* cor do texto */
+        padding: 10px 15px;
+        /* espaçamento interno */
+        border-radius: 50%;
+        /* borda arredondada */
+        cursor: pointer;
+        /* muda o cursor para indicar clicabilidade */
+        font-size: 2em;
+        /* tamanho do ícone */
+        z-index: 1010;
+        /* para garantir que fique acima de outros elementos */
+        opacity: 0.8;
+        /* ligeiramente transparente */
+        transition: opacity 0.3s;
+        /* transição suave para a opacidade */
     }
-    
+
     .back-to-top:hover {
-        opacity: 1; /* torna-se totalmente opaco quando o mouse passa por cima */
-    }
-    
-}
-
-/* arrumando responsividade da navbar quando chega em 367px  */
-@media (max-width: 478px ) {
-   
-
-    nav a {
-        margin: 0 auto;
-        font-size: 70%;
-    }
-    
-}
-
-
-/* arrumando responsividade da navbar quando chega em 367px  */
-@media (max-width: 367px ) {
-   
-
-    nav a {
-        margin: 0 auto;
-        font-size: 60%;
+        opacity: 1;
+        /* torna-se totalmente opaco quando o mouse passa por cima */
     }
 }
 
-/* arrumando responsividade da navbar quando chega em 334px  */
-@media (max-width: 334px ) {
-   
-   
-    nav a {
-        margin: 0 auto;
-        font-size: 50%;
-    }
+/* botao Back-To-Top Desktop */
+.back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #b3ff00;
+    color: #333;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 2em;
+    z-index: 1010;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+
+}
+
+.back-to-top:hover {
+    opacity: 1;
+    /* torna-se totalmente opaco quando o mouse passa por cima */
 }
