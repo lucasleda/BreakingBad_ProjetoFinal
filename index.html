@@ -9,10 +9,53 @@
     <meta name="author" content="Lucas Cardoso ">
     <title>Breaking Bad</title>
     <link rel="shortcut icon" href="imagens/breakingbad2.jfif" alt="Foto Breaking Bad">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <!-- Importando o Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css"><!-- Importando o arquivo de estilo principal do projeto -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
 </head>
+
+<!-- Script troca de imagens -->
+<script>
+    let imagens = [
+        "imagens/capawj3.jpg",
+        "imagens/capawj.jpg",
+        "imagens/capacozinha.jpg",
+        "imagens/capajesse.png",
+        "imagens/capawalter.jpg"
+    ];
+
+    let indiceAtual = 0;
+
+    function avancarImagem() {
+        indiceAtual = (indiceAtual + 1) % imagens.length;
+        document.querySelector('.header-image').src = imagens[indiceAtual];
+    }
+
+    function retrocederImagem() {
+        indiceAtual = (indiceAtual - 1 + imagens.length) % imagens.length;
+        document.querySelector('.header-image').src = imagens[indiceAtual];
+    }
+</script>
+
+<!-- Script para mostrar o botão de voltar ao topo da página -->
+<script>
+    window.onscroll = function () {
+        var btn = document.querySelector('.back-to-top');
+        if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+            btn.style.display = "block";
+        } else {
+            btn.style.display = "none";
+        }
+    };
+
+    function backToTop() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }</script>
+
+
 
 <body>
     <header>
@@ -23,14 +66,17 @@
     <nav>
         <a href="index.html">Início</a>
         <a href="personagens.html">Personagens</a>
-        <a href="episodios.html">Cortes</a>
+        <a href="episodios.html">Episódios</a>
         <a href="loja.html">Loja</a>
     </nav>
 
-    <section>
-        <img class="header-image" src="imagens/bb2.jpeg" alt="Breaking Bad">
-    </section>
 
+    <!-- Imagens que trocam no inicio  -->
+    <section style="position: relative;">
+        <img class="header-image" src="imagens/capawalter.jpg" alt="Breaking Bad">
+        <button class="botao-imagem botao-retroceder" onclick="retrocederImagem()">&#8592;</button>
+        <button class="botao-imagem botao-avançar" onclick="avancarImagem()">&#8594;</button>
+    </section>
 
     <!-- Seções com os posts e artigos do blog -->
     <section class="post" id="inicio">
@@ -181,24 +227,10 @@
         <br><br>
         <h3></h3>
     </aside>
-    <!-- Script para mostrar o botão de voltar ao topo da página -->
-    <script>
-        window.onscroll = function () {
-            var btn = document.querySelector('.back-to-top');
-            if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
-                btn.style.display = "block";
-            } else {
-                btn.style.display = "none";
-            }
-        };
 
-        function backToTop() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-        }
-    </script>
     <!-- Botão para voltar ao início da página -->
-    <span class="back-to-top" onclick="backToTop()">&#8679;</span>
+    <span class="back-to-top" onclick="backToTop()"><i class="fas fa-arrow-up"></i></span>
+
 
     <footer>
         <p>© 2023, Lucas Cardoso, Pedro Henrique, Jefferson, Gabriel</p>
