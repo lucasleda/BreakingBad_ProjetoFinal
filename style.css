@@ -255,6 +255,11 @@ aside a img {
     background-color: #333;
     border-radius: 10px;
     text-align: center;
+    transition: all 0.5s;
+}
+
+.product:hover {
+    transform: translate(-5px, -5px)
 }
 
 .product h2 {
