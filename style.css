@@ -391,13 +391,13 @@ a {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #b3ff00;
-    color: #333;
+    background-color: rgba(11, 94, 0, 0.993);
+    color: whitesmoke;
     border-radius: 50%;
     cursor: pointer;
     font-size: 20px;
     z-index: 1010;
-    opacity: 0.8;
+    opacity: 0.9;
     transition: opacity 0.3s, transform 0.3s;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
     text-align: center;
@@ -409,4 +409,9 @@ a {
 
 .back-to-top i {
     line-height: 50px;
+}
+
+#total {
+    color: #b3ff00;
+    font-style: italic;
 }
