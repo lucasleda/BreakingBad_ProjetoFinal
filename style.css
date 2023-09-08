@@ -227,10 +227,8 @@ aside a img {
   color: #b3ff00;
 }
 
-.episode,
-.episode1,
-.episode2,
-.episode3 {
+
+.clip {
   max-width: 800px;
   margin: 20px auto;
   padding: 5px 10px 20px 10px;
@@ -245,18 +243,18 @@ aside a img {
   border-radius: 5px;
 }
 
-.episode:hover {
+.clip:hover {
   background-color: #444;
 }
 
-.episode img {
+.clip img {
   width: 100%;
   height: auto;
   border-radius: 10px;
   margin-bottom: 15px;
 }
 
-#products_grade {
+/*#grade_produtos {
   display: grid;
 
   grid-template-columns: 1fr 800px 1fr;
@@ -295,6 +293,7 @@ aside a img {
 #p6 {
   grid-area: p6;
 }
+*/
 
 .product {
   width: 800px;
@@ -305,6 +304,10 @@ aside a img {
   text-align: center;
   transition: all 0.5s;
   grid-area: product;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
 }
 
 .product:hover {
@@ -361,6 +364,7 @@ aside a img {
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  
 }
 
 .link-icon {
@@ -474,16 +478,3 @@ a {
   font-style: italic;
 }
 
-#grade {
-  grid-template-rows: repeat(7, 1fr);
-  grid-template-columns: 50% 50%;
-
-  grid-template-areas:
-    "titulo-principal titulo-principal"
-    "nav nav"
-    "episode episode"
-    "episode1 episode1"
-    "episode2 episode2"
-    "episode3 episode3"
-    "footer footer";
-}
