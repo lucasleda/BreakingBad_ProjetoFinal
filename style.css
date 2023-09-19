@@ -58,7 +58,6 @@ header {
   text-align: center;
   color: #b3ff00;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-bottom: 5px solid #b3ff00;
   display: flex;
   justify-content: center;
 }
