@@ -203,19 +203,30 @@ aside a img {
   border-radius: 35px;
   margin: 20px 40px 40px;
 }
- .postimg {
+
+.postimg {
   background-color: #1e1e1e;
-  padding: 40px;
-  margin-bottom: 40px;
+  padding: 35px;
+  margin-bottom: 20px;
   border: 1px solid rgba(205, 219, 203, 0.993);
   border-radius: 35px;
-  margin: 20px 40px 40px;
   box-shadow: 0 8px 16px rgba(205, 219, 203, 0.993);
+  transition: transform 0.3s, box-shadow 0.3s;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  margin-right: 90px;
+  justify-content: space-between;
+}
 
+.postimg iframe {
+  transition: transform 0.3s, box-shadow 0.3s;
+  border-radius: 20px;
+  margin-right: 10px;
+}
+
+.postimg iframe:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.6);
 }
 
 .post p {
@@ -370,18 +381,28 @@ aside a img {
   background-color: #4ccf6d;
 }
 
-.footer {
-  background-color: #1f1f1f;
-  padding: 10px;
-  text-align: center;
-  color: #b3ff00;
-  bottom: 0;
-  width: 100%;
-  box-sizing: border-box;
+
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
   display: flex;
-  justify-content: center;
-  align-items: flex-end;
+  flex-direction: column;
 }
+
+.container-fluid {
+  flex: 1; 
+}
+
+.footer {
+  width: 100%; 
+}
+
+.footer-bottom {
+  padding: 10px 0;
+  text-align: center;
+}
+
 
 .link-icon {
   width: 24px;
