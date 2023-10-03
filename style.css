@@ -260,6 +260,20 @@ aside a img {
   width: 150px;
 }
 
+#b1 {
+  color: #000000;
+  text-decoration: none;
+  background-color: #98b94a;
+  padding: 8px 12px;
+  border-radius: 3px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#b1 :hover {
+  background-color: #333;
+  color: #b3ff00;
+}
+
 .clip {
   max-width: 800px;
   margin: 20px auto;
