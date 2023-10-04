@@ -58,7 +58,8 @@ header {
   text-align: center;
   color: #b3ff00;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-bottom: 5px solid #b3ff00;
+  display: flex;
+  justify-content: center;
 }
 
 .header-image {
@@ -90,6 +91,10 @@ nav {
   top: 0;
   z-index: 1000;
   box-shadow: 0 8px 16px rgba(11, 94, 0, 0.993);
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: center;
 }
 
 nav a {
@@ -155,6 +160,7 @@ aside h3,
   color: #b3ff00;
 }
 
+
 aside {
   background-color: #333;
   padding: 10px 20px;
@@ -196,7 +202,34 @@ aside a img {
   border: 1px solid #b3ff00;
   border-radius: 35px;
   margin: 20px 40px 40px;
-  box-shadow: 0 8px 16px rgba(11, 94, 0, 0.993);
+}
+
+.postimg {
+  background-color: #1e1e1e;
+  padding: 45px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(205, 219, 203, 0.993);
+  border-radius: 35px;
+  box-shadow: 0 8px 16px rgba(205, 219, 203, 0.993);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.postimg iframe {
+  transition: transform 0.3s, box-shadow 0.3s;
+  border-radius: 20px;
+  margin-right: 10px;
+}
+
+.postimg iframe:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.6);
 }
 
 .post p {
@@ -221,10 +254,27 @@ aside a img {
   color: #b3ff00;
 }
 
-.episode,
-.episode1,
-.episode2,
-.episode3 {
+.trailer {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 150px;
+}
+
+#b1 {
+  color: #000000;
+  text-decoration: none;
+  background-color: #98b94a;
+  padding: 8px 12px;
+  border-radius: 3px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#b1 :hover {
+  background-color: #333;
+  color: #b3ff00;
+}
+
+.clip {
   max-width: 800px;
   margin: 20px auto;
   padding: 5px 10px 20px 10px;
@@ -239,25 +289,70 @@ aside a img {
   border-radius: 5px;
 }
 
-.episode:hover {
+.clip:hover {
   background-color: #444;
 }
 
-.episode img {
+.clip img {
   width: 100%;
   height: auto;
   border-radius: 10px;
   margin-bottom: 15px;
 }
 
+/*#grade_produtos {
+  display: grid;
+
+  grid-template-columns: 1fr 800px 1fr;
+  grid-template-rows: 705.9px repeat(5, 1fr);
+
+  grid-template-areas:
+    ". p1 ."
+    ". p2 ."
+    ". p3 ."
+    ". p4 ."
+    ". p5 ."
+    ". p6 ."
+  ;
+}
+
+#p1 {
+  grid-area: p1;
+}
+
+#p2 {
+  grid-area: p2;
+}
+
+#p3 {
+  grid-area: p3;
+}
+
+#p4 {
+  grid-area: p4;
+}
+
+#p5 {
+  grid-area: p5;
+}
+
+#p6 {
+  grid-area: p6;
+}
+*/
+
 .product {
-  max-width: 800px;
+  width: 800px;
   margin: 40px auto;
   padding: 20px;
   background-color: #333;
   border-radius: 10px;
   text-align: center;
   transition: all 0.5s;
+  grid-area: product;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .product:hover {
@@ -303,18 +398,29 @@ aside a img {
   background-color: #4ccf6d;
 }
 
-.footer {
-  background-color: #1f1f1f;
-  padding: 10px;
-  text-align: center;
-  color: #b3ff00;
-  bottom: 0;
-  width: 100%;
-  box-sizing: border-box;
+
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
   display: flex;
-  justify-content: center;
-  align-items: flex-end;
+  flex-direction: column;
 }
+
+.container-fluid {
+  flex: 1; 
+}
+
+.footer {
+  width: 100%; 
+  border-radius: 25px;
+}
+
+.footer-bottom {
+  padding: 10px 0;
+  text-align: center;
+}
+
 
 .link-icon {
   width: 24px;
@@ -426,17 +532,3 @@ a {
   color: #b3ff00;
   font-style: italic;
 }
-
-#grade {
-    grid-template-rows: repeat(7, 1fr);
-    grid-template-columns: 50% 50%;
-  
-    grid-template-areas:
-      "titulo-principal titulo-principal"
-      "nav nav"
-      "episode episode"
-      "episode1 episode1"
-      "episode2 episode2"
-      "episode3 episode3"
-      "footer footer";
-  }
