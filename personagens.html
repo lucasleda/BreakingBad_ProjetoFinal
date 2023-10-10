@@ -178,6 +178,14 @@
             </section>
         </section>
     </section>
+    <section class="post">
+        <h2>Gerador de Citações</h2>
+        <p>Relembre algumas das frases marcantes dos personagens de Breaking Bad.</p>
+        <br>
+        <button id="b1">Clique Aqui</button>
+        <p id="frase"></p>
+        <h3 id="autor"></h3>
+    </section>
     <script>
         window.onscroll = function () {
             var btn = document.querySelector('.back-to-top');
@@ -191,6 +199,24 @@
         function backToTop() {
             document.body.scrollTop = 0;
             document.documentElement.scrollTop = 0;
+        };
+
+
+        let b1 = document.getElementById('b1');
+
+        b1.onclick = () => {
+            fetch('https://api.breakingbadquotes.xyz/v1/quotes')
+                .then(response => response.json())
+                .then(response => showInfo(response))
+        };
+
+
+        function showInfo(info) {
+            let frase = document.getElementById('frase')
+            let autor = document.getElementById('autor')
+
+            frase.innerText = info[0].quote;
+            autor.innerText = info[0].author;
         }
     </script>
     <span class="back-to-top" onclick="backToTop()">&#8679;</span>
