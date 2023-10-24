@@ -10,13 +10,14 @@
 
     <title>Cortes | Breaking Bad</title>
     <link rel="shortcut icon" href="imagens/breakingbad2.jfif" alt="Foto Breaking Bad">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/style.css"><!-- Importando o CSS do projeto -->
+    <!-- Importando o Bootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 
 <!-- Nome do site, título sobre a barra de navegação -->
 
 <body>
-
 
     <header>
         <h1 class="titulo-principal">Breaking Bad</h1>
@@ -24,7 +25,7 @@
 
     <!-- Barra de navegação com links para as principais seções do site -->
     <nav>
-        <a href="index.html">Início</a>
+        <a href="/index.html">Início</a>
         <a href="personagens.html">Personagens</a>
         <a href="cortes.html">Cortes</a>
         <a href="loja.html">Loja</a>
@@ -34,7 +35,7 @@
 
     <main>
         <div class="clip">
-            <h2>Trailer</h2>
+            <h2>Trailer: Breaking Bad</h2>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/FH_Pm-0kuFc"
                 title="Breaking Bad : A História Até Aqui (Resumo) | Dublado (Brasil) [4K]" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -42,7 +43,7 @@
         </div>
 
         <div class="clip">
-            <h2>Fatos Desconhecidos - Breaking Bad</h2>
+            <h2>Fatos Desconhecidos: Breaking Bad</h2>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/8dcfIMM-E54"
                 title="11 coisas que você não sabia sobre Breaking Bad" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -50,7 +51,7 @@
         </div>
 
         <div class="clip">
-            <h2>Resumão - A história</h2>
+            <h2>Resumão: A história</h2>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/7bVHlRORoKA"
                 title="Breaking Bad: A História em 1 Vídeo!" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -58,26 +59,44 @@
         </div>
 
         <div class="clip">
-            <h2>Eu sou um Baiacu</h2>
+            <h2>"Eu sou um Baiacu"</h2>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/BSIFehYvgks"
                 title="Eu sou um baiacu meme original" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen></iframe>
         </div>
 
-            <!-- Recomendação de Vídeo -->
         <div class="recomendacao_cont">
             <h3 class="recomendacao_title">Nos envie recomendações</h3>
+            <p>Copie e cole abaixo o link do vídeo:</p>
             <input id="inputVideo" type="url" placeholder="Insira aqui o link do vídeo">
             <button id="buttonInputVideo">Enviar</button>
         </div>
+
     </main>
+
+    <!-- Botão para voltar ao início da página -->
+    <span class="back-to-top" onclick="backToTop()"><i class="fas fa-arrow-up"></i></span>
+
     <!-- Rodapé da página -->
     <footer class="footer-bottom">
+        <div class="teste_footer">
+            <!-- Recomendação de Vídeo -->
+            <div class="footer_navigation">
+                <p>Menu</p>
+                <ul class="footer_list">
+                    <li><a href="/index.html">Início</a></li>
+                    <li><a href="personagens.html">Personagens</a></li>
+                    <li><a href="cortes.html">Cortes</a></li>
+                    <li><a href="loja.html">Loja</a></li>
+                </ul>
+            </div>
+        </div>
+
         <p>© 2023, Lucas Cardoso, Pedro Henrique, Jefferson, Gabriel</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="/js/cortes.js"></script>
 </body>
 
 </html>
