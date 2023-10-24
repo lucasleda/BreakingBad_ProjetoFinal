@@ -9,7 +9,8 @@ body {
 
 @font-face {
   font-family: "HeartBreakingBadFont";
-  src: url("/HeartBreakingBadFont.woff2") format("woff2");
+  src: url("/breakingbad_projeto_final/fonts/HeartBreakingBadFont.woff2")
+    format("woff2");
   font-weight: normal;
   font-style: normal;
 }
@@ -159,7 +160,6 @@ aside h3,
 .post p {
   color: #b3ff00;
 }
-
 
 aside {
   background-color: #333;
@@ -397,8 +397,8 @@ aside a img {
   background-color: #4ccf6d;
 }
 
-
-body, html {
+body,
+html {
   height: 100%;
   margin: 0;
   padding: 0;
@@ -407,19 +407,19 @@ body, html {
 }
 
 .container-fluid {
-  flex: 1; 
+  flex: 1;
 }
 
 .footer {
-  width: 100%; 
+  width: 100%;
   border-radius: 25px;
 }
 
 .footer-bottom {
   padding: 10px 0;
   text-align: center;
+  background-color: #000000;
 }
-
 
 .link-icon {
   width: 24px;
@@ -549,7 +549,7 @@ a {
   border-radius: 5px;
 }
 
-.recomendacao_cont{
+.recomendacao_cont {
   max-width: 800px;
   margin: 20px auto;
   padding: 5px 10px 20px 10px;
@@ -564,13 +564,48 @@ a {
   color: whitesmoke;
 }
 
-.teste_footer{
+.teste_footer {
   display: flex;
   justify-content: center;
 }
 
-.footer_list li{
-list-style: none;
-text-align: start;
+.footer_list li {
+  list-style: none;
+  text-align: start;
 }
 
+/* Grid do Footer */
+
+#grade {
+  display: grid;
+
+  grid-template-rows: 6rem 6rem;
+  grid-template-columns: 12rem 14rem 15rem ;
+
+  grid-template-areas:
+    "nav_footer nav_contact footer_sub"
+    "nav_footer nav_contact footer_sub"
+    "nav_footer nav_contact footer_sub"
+    "nav_footer nav_contact footer_sub";
+
+  grid-gap: 5px;
+  justify-items: center;
+  align-items: center;
+  justify-content: space-evenly;
+  align-content: space-evenly;
+  margin: 4rem 2rem 5px 2rem;
+}
+
+.footer_sub {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 5px 10px 20px 10px;
+  border-radius: 10px;
+  transition: background-color 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  border-radius: 10px;
+  color: whitesmoke;
+}
