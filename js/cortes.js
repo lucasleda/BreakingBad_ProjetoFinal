@@ -29,3 +29,18 @@ function backToTop() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+// Cortes: Script subscribe
+let subs = [];
+
+let inputEmail = document.getElementById("inputEmail");
+let buttonInputEmail = document.getElementById("buttonInputEmail");
+
+buttonInputVideo.onclick = () => {
+  subs.push(inputEmail.value);
+  inputEmail.value = "";
+
+  let emailsJson = JSON.stringify(subs);
+  localStorage.setItem("emails", emailsJson);
+  alert("Sua solicitação de subscribe foi recebida, obrigado!");
+};
