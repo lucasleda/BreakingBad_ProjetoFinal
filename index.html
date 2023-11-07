@@ -16,48 +16,6 @@
 
 </head>
 
-<!-- Script troca de imagens -->
-<script>
-    let imagens = [
-        "imagens/capawj3.jpg",
-        "imagens/capawj.jpg",
-        "imagens/capacozinha.jpg",
-        "imagens/capajesse.png",
-        "imagens/capawalter.jpg",
-        "imagens/money.jpg",
-        "imagens/todos.jpg"
-    ];
-
-    let indiceAtual = 0;
-
-    function avancarImagem() {
-        indiceAtual = (indiceAtual + 1) % imagens.length;
-        document.querySelector('.header-image').src = imagens[indiceAtual];
-    }
-
-    function retrocederImagem() {
-        indiceAtual = (indiceAtual - 1 + imagens.length) % imagens.length;
-        document.querySelector('.header-image').src = imagens[indiceAtual];
-    }
-</script>
-
-<!-- Script para mostrar o botão de voltar ao topo da página -->
-<script>
-    window.onscroll = function () {
-        var btn = document.querySelector('.back-to-top');
-        if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
-            btn.style.display = "block";
-        } else {
-            btn.style.display = "none";
-        }
-    };
-
-    function backToTop() {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-    }</script>
-
-
 
 <body>
     <header>
@@ -208,6 +166,7 @@
             A última temporada da produção disponível na Netflix foi lançada em 2022 e ganhou três categorias do Critics
             Choice Awards 2023, como Melhor Série de Drama.</p>
     </section>
+    
     <section class="postimg"> <iframe width="560" height="315"
             src="https://www.youtube.com/embed/HNXWUVBy4wo?si=l7kX_B1xO39fJcfJ" title="YouTube video player"
             frameborder="0"
@@ -261,6 +220,7 @@
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen></iframe>
     </section>
+
     <section class="post" id="premios">
         <h2 class="titulo-principal">Breaking Bad Premios</h2>
         <p>Breaking Bad recebeu ampla aclamação da crítica e ganhou vários prêmios, incluindo 16 Primetime Emmy Awards.
@@ -273,6 +233,7 @@
             Satellite Awards, 3 estatuetas de 11 indicações no Screen Actors Guild Awards, e 9 prêmios no Saturn Awards,
             entre mais de 20 indicações.</p>
     </section>
+    
     <section class="postimg">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/ptkS3gqCYzw?si=muS6sVvWXyCOiv8g"
             title="YouTube video player" frameborder="0"
@@ -293,41 +254,8 @@
     </section>
 
 
-
-
     <!-- Botão para voltar ao início da página -->
     <span class="back-to-top" onclick="backToTop()"><i class="fas fa-arrow-up"></i></span>
-
-    <!--
-    </div>
-    <div class="container-fluid">
-        <footer class="footer bg-dark text-center text-white">
-            <div class="container p-1 pb-0">
-                <section class="mb-4">
-
-                    <a class="btn btn-outline-light btn-floating m-3" href="https://www.facebook.com/BreakingBad"
-                        target="_blank" role="button">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-
-                    <a class="btn btn-outline-light btn-floating m-3" href="https://twitter.com/BreakingBad"
-                        target="_blank" role="button">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-
-                    <a class="btn btn-outline-light btn-floating m-3" href="https://www.instagram.com/breakingbad/"
-                        role="button">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                </section>
-                <div class="footer-bottom" style="background-color: rgba(0, 0, 0, 0.2);">
-                    © 2023 Direitos Autorais: Alunos CoderHouse
-                    <i class="text-white" href="">Breaking Bad</i>
-                </div>
-            </div>
-        </footer>
-    </div>
--->
 
     <!-- Rodapé da página -->
     <footer class="footer-bottom">
@@ -346,8 +274,8 @@
                 <p>Contatos</p>
                 <ul class="footer_list">
                     <li><a href="https://www.linkedin.com/in/gabriel-oliveira-pm/">Gabriel Oliveira Gomes</a></li>
-                    <li><a href="#">Lucas Cardoso</a></li>
-                    <li><a href="#">Jefferson</a></li>
+                    <li><a href="https://www.linkedin.com/in/lucas-cardoso-weidner-871165205/">Lucas Cardoso</a></li>
+                    <li><a href="https://www.linkedin.com/in/jeffersonbferreira/">Jefferson</a></li>
                     <li><a href="#">Pedro Henrique</a></li>
                 </ul>
             </div>
@@ -372,7 +300,7 @@
     </footer>
 
     </div>
-    <script src="js/script.js"></script>
+    <script src="js/index.js"></script>
 </body>
 
 </html>
