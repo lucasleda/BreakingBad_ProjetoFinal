@@ -298,47 +298,6 @@ aside a img {
   margin-bottom: 15px;
 }
 
-/*#grade_produtos {
-  display: grid;
-
-  grid-template-columns: 1fr 800px 1fr;
-  grid-template-rows: 705.9px repeat(5, 1fr);
-
-  grid-template-areas:
-    ". p1 ."
-    ". p2 ."
-    ". p3 ."
-    ". p4 ."
-    ". p5 ."
-    ". p6 ."
-  ;
-}
-
-#p1 {
-  grid-area: p1;
-}
-
-#p2 {
-  grid-area: p2;
-}
-
-#p3 {
-  grid-area: p3;
-}
-
-#p4 {
-  grid-area: p4;
-}
-
-#p5 {
-  grid-area: p5;
-}
-
-#p6 {
-  grid-area: p6;
-}
-*/
-
 .product {
   width: 800px;
   margin: 40px auto;
@@ -579,7 +538,7 @@ a {
   display: grid;
 
   grid-template-rows: 6rem 6rem;
-  grid-template-columns: 12rem 14rem 15rem ;
+  grid-template-columns: 12rem 14rem 15rem;
 
   grid-template-areas:
     "nav_footer nav_contact footer_sub"
