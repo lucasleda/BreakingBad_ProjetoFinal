@@ -392,83 +392,6 @@ a {
   color: aqua;
 }
 
-@media (max-width: 768px) {
-  body {
-    font-size: 16px;
-  }
-
-  .titulo-principal {
-    font-size: 50px;
-  }
-
-  .botao-imagem {
-    width: 40px;
-    height: 40px;
-    font-size: 18px;
-  }
-
-  .botao-retroceder {
-    left: 30px;
-  }
-
-  .botao-avançar {
-    right: 30px;
-  }
-
-  header {
-    padding: 2px 2px;
-  }
-
-  .header-image {
-    width: 100%;
-    height: 30vh;
-  }
-
-  nav {
-    font-size: 1.2em;
-  }
-
-  .characters-container {
-    padding: 15px;
-  }
-
-  .character {
-    flex-basis: 100%;
-    margin: 10px;
-    padding: 10px;
-  }
-
-  aside {
-    width: 100%;
-    margin: 10px 0;
-  }
-
-  .post {
-    margin: 10px 20px 20px;
-  }
-
-  .episode {
-    max-width: 100%;
-    margin: 10px 0;
-  }
-
-  .loja {
-    display: block;
-  }
-
-  .product {
-    width: 90%;
-    margin: 20px auto;
-    align-items: normal;
-  }
-
-  .footer {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-  }
-}
-
 .back-to-top {
   display: none;
   position: fixed;
@@ -575,4 +498,95 @@ a {
   margin-top: 30px;
   border-radius: 10px;
   color: whitesmoke;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  .titulo-principal {
+    font-size: 50px;
+  }
+
+  .botao-imagem {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  .botao-retroceder {
+    left: 30px;
+  }
+
+  .botao-avançar {
+    right: 30px;
+  }
+
+  header {
+    padding: 2px 2px;
+  }
+
+  .header-image {
+    width: 100%;
+    height: 30vh;
+  }
+
+  nav {
+    font-size: 1.2em;
+  }
+
+  .characters-container {
+    padding: 15px;
+  }
+
+  .character {
+    flex-basis: 100%;
+    margin: 10px;
+    padding: 10px;
+  }
+
+  aside {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .post {
+    margin: 10px 20px 20px;
+  }
+
+  .episode {
+    max-width: 100%;
+    margin: 10px 0;
+  }
+
+  .loja {
+    display: block;
+  }
+
+  .product {
+    width: 90%;
+    margin: 20px auto;
+    align-items: normal;
+  }
+
+  #grade {
+    display: grid;
+  
+    grid-template-rows:  200px 200px 10px;
+    grid-template-columns: 50% 50%;
+  
+    grid-template-areas:
+      "nav_footer nav_contact"
+      "nav_footer nav_contact"
+      "footer_sub footer_sub";
+  
+    grid-gap: 0px;
+    justify-items: center;
+    align-items: center;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+    margin: 1rem 2rem 5px 2rem;
+  }
+  
 }
