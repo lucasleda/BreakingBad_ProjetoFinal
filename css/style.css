@@ -304,7 +304,7 @@ aside a img {
 }
 
 .product {
-  width: 45%;
+  width: 30%;
   margin: 40px auto;
   padding: 20px;
   background-color: #333;
@@ -515,10 +515,10 @@ a {
   }
 
   .postimg iframe {
-   margin-right: 0;
-   margin-bottom: 10px;
-   width: 45%; 
-   height: 315px;
+    margin-right: 0;
+    margin-bottom: 10px;
+    width: 45%;
+    height: 315px;
   }
 
   .botao-imagem {
