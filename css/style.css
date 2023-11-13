@@ -515,8 +515,10 @@ a {
   }
 
   .postimg iframe {
-    margin-right: 0;
-    margin-bottom: 10px;
+   margin-right: 0;
+   margin-bottom: 10px;
+   width: 45%; 
+   height: 315px;
   }
 
   .botao-imagem {
