@@ -9,7 +9,7 @@ body {
 
 @font-face {
   font-family: "HeartBreakingBadFont";
-  src: url("/fonts/HeartBreakingBadFont.woff2");
+  src: url("../fonts/HeartBreakingBadFont.woff2");
   font-weight: normal;
   font-style: normal;
 }
