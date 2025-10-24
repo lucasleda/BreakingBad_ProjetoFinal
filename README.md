@@ -17,6 +17,7 @@ O site reúne conteúdo informativo, galeria de vídeos, gerador de citações v
 
 💡 Design Responsivo e compatível com dispositivos móveis
 
+
 ⚙️ Tecnologias Utilizadas
 
 HTML5
@@ -28,6 +29,7 @@ JavaScript (DOM + API Fetch)
 Font Awesome para ícones
 
 Breaking Bad Quotes API
+
 
 📁 Estrutura de Arquivos
 breaking-bad-site/
@@ -43,6 +45,7 @@ breaking-bad-site/
 │   └── index.js             # Script de controle do carrinho e navegação
 └── imagens/                 # Imagens utilizadas (logos, posters, etc.)
 
+
 🧠 Sobre o Projeto
 
 Este projeto foi criado com o objetivo de demonstrar habilidades em desenvolvimento front-end, consumo de APIs e boas práticas de design web.
@@ -57,29 +60,6 @@ Estrutura modular e semântica em HTML
 
 Estilo consistente e acessível, seguindo padrões modernos de UI/UX
 
-🚀 Como Executar Localmente
-
-Baixe o projeto
-
-git clone https://github.com/lucasleda/breaking-bad-loja.git
-cd breaking-bad-loja
-
-
-Abra o arquivo principal
-
-Clique duas vezes em index.html
-
-Ou abra via servidor local (ex: com VS Code → “Go Live”)
-
-Explore as seções
-
-index.html → Conteúdo principal
-
-personagens.html → API e personagens
-
-loja.html → Produtos e botão de compra
-
-carrinho.html → Ver itens adicionados
 
 👨‍💻 Autores
 
